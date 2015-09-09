@@ -14,3 +14,11 @@ $(function() {
     }
   });
 });
+
+
+$(function() {
+    $("a[href=#menuExpand]").click(function(e) {
+        $("#main-menu").toggleClass("show");
+        e.preventDefault();
+    });
+});
