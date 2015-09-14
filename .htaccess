@@ -106,7 +106,7 @@ Options -MultiViews
 
   RewriteEngine On 
   RewriteCond %{SERVER_PORT} 80 
-  RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
+  RewriteRule ^(.*)$ https://enigmaladiessalon.com/$1 [R,L]
 
 
 # ######################################################################
