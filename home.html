@@ -8,9 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        
-        <!-- GOOGLE VERTIFICATION -->
-        <meta name="google-site-verification" content="v3sAt-EVUq_gaO067KhukkDXBq2QLyQ0Tn0BerW4sSs" />
 
         <!-- FONTS -->
         <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -325,7 +322,7 @@
                 </div>
 
                 <a href="#services" class="ghost-button">
-                    <span class="button-text">Full service list</span>
+                    Full service list
                 </a>
 
             </div>
@@ -369,14 +366,45 @@
         
         <section id="location-map" class="location-map page-section">
             <div class="location-map-content section-content">
-                <div id="map"></div>
+                
             </div>
         </section>
 
         <section id="contact" class="contact">
             <div class="contact-content section-content">
                 
+                <h2 id="main-topic">Contact Us</h2>
+                <h4 id="main-description">
+                    Any inquiry, questions, feedbacks or booking request.
+                </h4>
+                 <form action="http://mailthis.to/enigma" id="contact-me" role="form" method="POST">
+                    <div id="form-left">
+                        <input type="text" id="form-name" name="name" placeholder="* Name" required />
+                        <input type="email" id="form-email" name="_replyto" placeholder="* Email" required />
+                        <input type="tel" id="form-mobile" name="mobile|numeric" placeholder="Phone / Mobile Number ( Optional )" />
+                    </div>
+                    <div id="form-right">
+                        <textarea type="text" name="message" placeholder="* Message" required></textarea>
+                    </div>
+                    
+                    <input type="submit" id="form-submit" value="Send">
+                    <input type="hidden" name="_confirmation" value="<b>Thank you!</b> We have received your message and will get back to you asap.<br>
+                    <a href='http://enigmaladiessalon.com'>Go back</a>">
+                </form>
 
+            </div>
+        </section>
+    
+        <section id="social-media-section" class="social-media-section">
+            <div class="social-media-content section-content">
+
+                <ul id="social-media">
+                    <a href=""><li></li></a>
+                    <a href=""><li></li></a>
+                    <a href=""><li></li></a>
+                    <a href=""><li></li></a>
+                    <a href=""><li></li></a>
+                </ul>
 
             </div>
         </section>
@@ -411,7 +439,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            ga('create','UA-64484585-1','auto');ga('send','pageview');
 
             // OWL CAROUSEL - SERVICES
             $(document).ready(function() {

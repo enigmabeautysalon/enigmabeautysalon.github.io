@@ -266,14 +266,14 @@ header > .header-contact > h5 {
 }
 #main-topic {
 	font-family: 'Cookie',cursive,'Helvetica', serif;
-	font-size: 4em;
+	font-size: 3em;
 	text-align: center;
 	margin: 0.250em 0;
 	color: #404040;
 }
 #main-description {
 	font-family: 'Hind Siliguri', 'Arial', sans-serif;
-	font-size: 1.50em;
+	font-size: 1.250em;
 	font-weight: 300;
 	width: 80%;
 	max-width: 800px;
@@ -283,6 +283,15 @@ header > .header-contact > h5 {
 	color: #707070;
 }
 
+@media screen and (min-width: 768px) {
+	#main-topic {
+		font-size: 4em;
+	}
+	#main-description {
+		font-size: 1.50em;
+	}
+}
+
 /*----------------------------------
  * MAIN SECTION
  */
@@ -290,10 +299,11 @@ header > .header-contact > h5 {
 .main-section {
 	min-height: 100%;
 	height: 80vh;
-	
 }
 .main-section-content {
 	position: relative;
+	top: 0;
+	transform: translateY(0);
 }
 .main-section-content > #main-title {
 	font-family: 'Cookie',cursive,'Helvetica', serif;
@@ -431,6 +441,7 @@ header > .header-contact > h5 {
 	display: inline-block;
 	min-width: 200px;
 	max-width: 600px;
+	min-height: 400px;
 	margin: 1em auto;
 	padding: 0.75em;
 
@@ -526,17 +537,16 @@ header > .header-contact > h5 {
 .ghost-button {
 	position: relative;
 	display: block;
-	width: 50%;
-	max-width: 200px;
+	width: 200px;
+	height: 50px;
 	margin: 2em auto;
-	padding: 0.50em 2em 0.50em 1em;
 	border: 1px solid rgb(136, 90, 248);
 	font-size: 1.250em;
 	font-family: 'Hind Siliguri','Arial',sans-serif;
 	color: rgb(136, 90, 248);
 	text-align: center;
 	border-radius: 999em;
-
+	padding: 0.750em 0;
 	-webkit-transition: all 0.1s ease-in-out;
 	-moz-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
@@ -547,17 +557,6 @@ header > .header-contact > h5 {
 	border: 1px solid transparent;
 	color: #fefefe;
 	text-decoration: none;
-}
-.button-text::after {
-	position: absolute;
-	content: "\f054";
-	font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    top: 0.50em;
-    right: 15px;
-    bottom: 0;
 }
 
 /*----------------------------------
@@ -685,24 +684,147 @@ header > .header-contact > h5 {
  * CONTACT
  */
 
- .contact {
+.contact {
 	position: relative;
-	height: 60vh;
-	min-height: 60vh;
+	width: 100%;
+	height: 100%;
+	background: rgba(189,163,251,0.60);
 }
 .contact-content {
-	margin: 5em auto;
-	/*
 	position: relative;
+	width: 90%;
 	top: 50%;
-	transform: translateY(-50%);
-	*/
+	text-align: center;
+	margin: 0 auto;
+	padding: 2.5em 15px;
+}
+form {
+	margin: 2em 0;
+	font-family: 'Hind Siliguri', 'Arial', sans-serif;
+}
+form input,
+form textarea {
+	border: 1px solid rgba(210,210,210,0.60);
+}
+form #form-left,
+form #form-right {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	vertical-align: top;
+}
+form #form-name,
+form #form-email,
+form #form-mobile {
+	display: block;	
+	width: 90%;
+	margin: 0 auto;
+	padding: 0.50em 1em;
+	margin-bottom: 1em;
+	font-size: 1.250em;
+	color: #885af8;
+}
+form textarea {
+	display: block;
+	width: 90%;
+	min-height: 180px;
+	padding: 0.50em 1em;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	font-size: 1.250em;
+	vertical-align: top;
+}
+form #form-submit {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 1em auto;
+	text-align: center;
+	background: transparent;
+	color: #885af8;
+	border: 1px solid rgba(136, 90, 248, 0.60);
+	border-radius: 999em;
+	font-size: 1.25em;
+}
+
+@media screen and (min-width: 768px) {
+	.contact-content {
+		width: 80%;
+	}
+	form #form-left,
+	form #form-right {
+		width: 49%;
+	}
+	form {
+		font-size: 1em;
+	}
 }
 
 /*****************************************
  * TAB BOXES
  */
 
+/*----------------------------------------
+ * SOCIAL MEDIA
+ */
+
+.social-media-section {
+	width: 100%;
+	height: 100%;
+}
+.social-media-content {
+	position: relative;
+	top: 50%;
+}
+#social-media {
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+#social-media li {
+	display: inline-block;
+	margin: 1em 0.750em;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+#social-media a li {
+	opacity: 1;
+	width: 50px;
+	height: 50px;
+}
+#social-media a li:hover {
+	opacity: 0.70;
+}
+#social-media a:nth-child(1) li{
+	background: url('../img/social-icons/fb.png');
+	background-size: cover;
+	background-position: center;
+}
+#social-media a:nth-child(2) li {
+	background: url('../img/social-icons/instagram.png');
+	background-size: cover;
+	background-position: center;
+}
+#social-media a:nth-child(3) li {
+	background: url('../img/social-icons/twitter.png');
+	background-size: cover;
+	background-position: center;
+}
+#social-media a:nth-child(4) li {
+	background: url('../img/social-icons/youtube.png');
+	background-size: cover;
+	background-position: center;
+}
+#social-media a:nth-child(5) li {
+	background: url('../img/social-icons/googleplus.png');
+	background-size: cover;
+	background-position: center;
+}
 
 /*----------------------------------------
  * FOOTER
@@ -729,6 +851,7 @@ footer {
 	background: #885af8;
 	border-radius: 50%;
 	padding: 1em;
+	z-index: 100;
 
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -744,20 +867,34 @@ i#go-top {
 }
 .footer-content {
 	position: relative;
-	line-height: 100px;
+	padding: 2em 0;
+	line-height: 1.6;
 }
 footer ul {
 	position: relative;
 	display: block;
 	margin: 0;
+	padding: 0;
 	text-align: center;
 }
 footer ul li {
 	padding: 0 0.50em;
 }
 footer ul li a {
+	display: block;
 	font-family: 'Homenaje','Arial','Helvetica',sans-serif;
 	font-size: 1.50em;
 	color: #885af8;
-	padding: 0 0.250em;
+	padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.footer-content {
+		line-height: 100px;
+		padding: 0;
+	}
+	footer ul li a {
+		display: inline-block;
+		padding: 0 0.250em;
+	}
 }
