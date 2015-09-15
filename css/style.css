@@ -688,14 +688,25 @@ header > .header-contact > h5 {
  */
 
 .tab-boxes {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 	display: inline-block;
 	width: 25%;
 	max-width: 300px;
 	height: 300px;
 	box-sizing: border-box;
-	border: 0.50em solid rgba(248,215,90,0.60);
+	border: 1px solid rgba(248,215,90,0.60);
 	margin: 0 1em;
-	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.tab-boxes:hover {
+	transform: translateY(-55%);
 }
 .tab-boxes-content {
 	position: relative;
@@ -705,8 +716,8 @@ header > .header-contact > h5 {
 }
 .contact {
 	position: relative;
-	height: 80vh;
-	min-height: 80vh;
+	height: 60vh;
+	min-height: 60vh;
 }
 .contact-content {
 	margin: 5em auto;
@@ -755,7 +766,7 @@ i#go-top {
 }
 .footer-content {
 	position: relative;
-	top: 50%;
+	line-height: 100px;
 }
 footer ul {
 	position: relative;
