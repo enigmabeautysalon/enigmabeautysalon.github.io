@@ -92,7 +92,7 @@ header > .header-contact > h5 {
 	filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	header {
 		border-bottom: 1px solid rgba(124,111,255,0.33);
 	}
@@ -125,7 +125,7 @@ header > .header-contact > h5 {
 }
 .menuIcon {
 	display: block;
-	width: 80%;
+	width: 95%;
 	margin: 0 auto;
 	margin-top: 0.50em;
 	padding: 0.50em;
@@ -150,7 +150,7 @@ header > .header-contact > h5 {
 	left: 0;
 	right: 0;
 	max-height: 0;
-	width: 80%;
+	width: 95%;
 	padding: 0;
 	margin: 0 auto;
 	text-align: center;
@@ -184,7 +184,7 @@ header > .header-contact > h5 {
 	display: inline-block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.menuIcon {
 		display: none;
 	}
@@ -259,10 +259,9 @@ header > .header-contact > h5 {
 .page-section {
 	height: 100%;
 	min-height: 100%;
-	padding-bottom: 1em;
 }
 .section-content {
-	padding: 5em 15px;
+	padding: 2em 15px;
 }
 #main-topic {
 	font-family: 'Cookie',cursive,'Helvetica', serif;
@@ -273,7 +272,7 @@ header > .header-contact > h5 {
 }
 #main-description {
 	font-family: 'Hind Siliguri', 'Arial', sans-serif;
-	font-size: 1.250em;
+	font-size: 1em;
 	font-weight: 300;
 	width: 80%;
 	max-width: 800px;
@@ -283,7 +282,10 @@ header > .header-contact > h5 {
 	color: #707070;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
+	.section-content {
+		padding: 5em 15px;
+	}
 	#main-topic {
 		font-size: 4em;
 	}
@@ -304,10 +306,11 @@ header > .header-contact > h5 {
 	position: relative;
 	top: 0;
 	transform: translateY(0);
+	padding: 0 15px;
 }
 .main-section-content > #main-title {
 	font-family: 'Cookie',cursive,'Helvetica', serif;
-	font-size: 5em;	
+	font-size: 3.5em;	
 	text-align: center;
 	color: rgb(124,111,255);
 
@@ -321,13 +324,14 @@ header > .header-contact > h5 {
 }
 .main-section-content > #sub-title {
 	font-family: 'Hind Siliguri', sans-serif;
-	font-size: 2.50em;
+	font-size: 1.750em;
 	text-align: center;
 	font-weight: 200;
 	color: #505050;
 }
 .line-divider {
 	position: relative;
+	display: none;
 	width: 100%;
 	text-align: center;
 	padding: 10px;
@@ -381,7 +385,10 @@ header > .header-contact > h5 {
   	animation:         floating 1s infinite alternate;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
+	.line-divider {
+		display: block;
+	}
 	.main-section-content {
 		top: 50%;
 		transform: translateY(-50%);
@@ -397,7 +404,7 @@ header > .header-contact > h5 {
 
 .about-section {
 	height: 100%;
-	min-height: 60vh;
+	min-height: 40vh;
 	background: linear-gradient( 45deg, rgba(124,111,255,0.40), rgba(252,255,144,0.40) );
 }
 .about-section-content {
@@ -408,7 +415,7 @@ header > .header-contact > h5 {
 
 /*----------------------------------
  * TEAM SECTION
-,*/
+ */
 
 .team-section {
 	height: 100%;
@@ -436,6 +443,20 @@ header > .header-contact > h5 {
 /* TABLES
 ---------------------------------*/
 
+.services-item {
+	width: auto;
+	min-width: 200px;
+	min-height: 400px;
+	border: 1px solid #ddd;
+	margin: 0 1.5em;
+	padding: 0.50em;
+}
+.services-item table {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+/*
 .main-page-table {
 	position: relative;
 	display: inline-block;
@@ -450,6 +471,7 @@ header > .header-contact > h5 {
 	vertical-align: top;
 	text-align: center;
 }
+*/
 .main-page-table thead tr {
 	border-bottom: 1px solid #ddd;
 }
@@ -492,11 +514,11 @@ header > .header-contact > h5 {
  *****************************************/
 
 .owl-theme .owl-controls .owl-buttons div {
-  padding: 0.250em 0.750em;
+  padding: 0.350em 0.850em;
 }
  
 .owl-theme .owl-buttons i{
-  font-size: 1.250em;
+  font-size: 1.50em;
   margin-top: 5px;
 }
 
@@ -505,12 +527,12 @@ header > .header-contact > h5 {
 }
  
 .owl-theme .owl-controls .owl-buttons .owl-prev{
-  left: -35px;
+  left: -25px;
   top: 25%;
 }
  
 .owl-theme .owl-controls .owl-buttons .owl-next{
-  right: -35px;
+  right: -25px;
   top: 25%;
 }
 
@@ -684,19 +706,31 @@ header > .header-contact > h5 {
  * CONTACT
  */
 
-.contact {
+.contact-section {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: rgba(189,163,251,0.60);
+	min-height: 100vh;
+	font-size: 0;
 }
-.contact-content {
+#location-map,
+#form {
 	position: relative;
-	width: 90%;
-	top: 50%;
-	text-align: center;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
 	margin: 0 auto;
+}
+#form {
+	/*
+	background: rgba(189,163,251,1); */
+	background: -webkit-linear-gradient(92deg,rgba(189,163,251,1),rgba(189,163,251,0.80));
+}
+#form-content {
+	width: 100%;
 	padding: 2.5em 15px;
+	text-align: center;
+	font-size: 16px;
 }
 form {
 	margin: 2em 0;
@@ -718,6 +752,7 @@ form #form-email,
 form #form-mobile {
 	display: block;	
 	width: 90%;
+	height: 50px;
 	margin: 0 auto;
 	padding: 0.50em 1em;
 	margin-bottom: 1em;
@@ -740,24 +775,54 @@ form #form-submit {
 	height: 50px;
 	margin: 1em auto;
 	text-align: center;
-	background: transparent;
+	background: rgba(255,255,255,1);
 	color: #885af8;
 	border: 1px solid rgba(136, 90, 248, 0.60);
 	border-radius: 999em;
 	font-size: 1.25em;
+
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+form #form-submit:hover {
+	background: rgba(136, 90, 248,0.80);
+	border: 1px solid transparent;
+	color: #fefefe;
 }
 
-@media screen and (min-width: 768px) {
-	.contact-content {
-		width: 80%;
+.google-map {
+	clear: both;
+	width: 100%;
+	height: 100%;
+	min-height: 350px;
+}
+.google-map iframe {
+	width: 100%;
+	height: 100%;
+	min-height: 350px;
+}
+
+@media screen and (min-width: 769px) {
+	#location-map,
+	#form {
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+		min-height: 100vh;
 	}
-	form #form-left,
-	form #form-right {
-		width: 49%;
+	.google-map {
+		height: 100%;
+		min-height: 100vh;
+		font-size: 16px;
 	}
-	form {
-		font-size: 1em;
+	.google-map iframe {
+		width: 100%;
+		height: 100%;
+		min-height: 100vh;
 	}
+	
 }
 
 /*****************************************
@@ -771,10 +836,13 @@ form #form-submit {
 .social-media-section {
 	width: 100%;
 	height: 100%;
+	background: url('../img/crossword.png');
+	background-repeat: repeat;
 }
 .social-media-content {
 	position: relative;
 	top: 50%;
+	padding: 5em 15px;
 }
 #social-media {
 	display: inline-block;
@@ -824,6 +892,13 @@ form #form-submit {
 	background: url('../img/social-icons/googleplus.png');
 	background-size: cover;
 	background-position: center;
+}
+
+@media screen and (min-width: 769px) {
+	#social-media a li {
+		width: 60px;
+		height: 60px;
+	}
 }
 
 /*----------------------------------------
@@ -888,7 +963,7 @@ footer ul li a {
 	padding: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.footer-content {
 		line-height: 100px;
 		padding: 0;
