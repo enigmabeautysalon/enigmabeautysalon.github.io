@@ -6,6 +6,15 @@
  *
  */
 
+/* main colors
+ * #bda3fb - rgb(189,163,251) MAIN COLOR
+ * #b5fba3 - rgb(181,251,163) yellow
+ * #fbe9a3 - rgb(251,233,163) orange
+ * #a3fbbd - rgb(163,251,189) green
+ * #fbbda3 - rgb(251,189,163) red
+ * #a3e1fb - rgb(163,225,251) blue
+ */
+
 /*
  * SETTING UP DEFAULT PROPERTIES
  ******************************************/
@@ -436,8 +445,13 @@ header > .header-contact > h5 {
 }
 #service-tables {
 	width: 90%;
+	height: 100%;
 	margin: 0 auto;
 	text-align: center;
+}
+
+#service-tables > .owl-wrapper-outer {
+	padding: 15px 0;
 }
 
 /* TABLES
@@ -449,12 +463,14 @@ header > .header-contact > h5 {
 	min-height: 400px;
 	border: 1px solid #ddd;
 	margin: 0 1.5em;
-	padding: 0.50em;
 }
 .services-item table {
 	width: 100%;
 	text-align: center;
 	margin: 0 auto;
+}
+.services-item {
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 /*
 .main-page-table {
@@ -472,8 +488,14 @@ header > .header-contact > h5 {
 	text-align: center;
 }
 */
+.main-page-table thead {
+	background: rgb(163,251,189);
+	border-bottom: 2px solid #ddd;
+	padding: 15px 0;
+}
 .main-page-table thead tr {
-	border-bottom: 1px solid #ddd;
+	
+
 }
 .main-page-table thead tr td {
 	font-family: 'Hind Siliguri', 'Arial', sans-serif;
@@ -482,20 +504,21 @@ header > .header-contact > h5 {
 	text-align: center;
 }
 .main-page-table tbody {
-
+	
 }
 .main-page-table tbody tr {
 	border-bottom: 1px solid #ddd;
+
 }
 .main-page-table tbody tr:hover {
-	background: rgba(92,169,255,0.33);
+	background: rgba(189,163,251,0.5);
 }
 .main-page-table tbody tr:nth-last-child(1) {
 	border-bottom: 1px solid transparent;
 }
 .main-page-table tr td {
-	padding: 0.250em 0.30em;
 	text-align: left;
+	padding: 0.50em;
 }
 .main-page-table tbody tr td {
 	font-family: 'Hind Siliguri', 'Arial', sans-serif;
@@ -751,7 +774,7 @@ form #form-name,
 form #form-email,
 form #form-mobile {
 	display: block;	
-	width: 0%;
+	width: 90%;
 	height: 50px;
 	margin: 0 auto;
 	padding: 0.50em 1em;
@@ -842,8 +865,7 @@ form #form-submit:hover {
 .social-media-section {
 	width: 100%;
 	height: 100%;
-	background: url('../img/crossword.png');
-	background-repeat: repeat;
+	background: url('../img/crossword.png') repeat;
 }
 .social-media-content {
 	position: relative;
