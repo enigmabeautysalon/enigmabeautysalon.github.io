@@ -751,7 +751,7 @@ form #form-name,
 form #form-email,
 form #form-mobile {
 	display: block;	
-	width: 90%;
+	width: 0%;
 	height: 50px;
 	margin: 0 auto;
 	padding: 0.50em 1em;
@@ -805,6 +805,12 @@ form #form-submit:hover {
 }
 
 @media screen and (min-width: 769px) {
+	form #form-name,
+	form #form-email,
+	form #form-mobile,
+	form textarea {
+		width: 80%;
+	}
 	#location-map,
 	#form {
 		display: inline-block;
