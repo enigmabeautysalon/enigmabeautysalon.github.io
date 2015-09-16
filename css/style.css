@@ -34,233 +34,208 @@ ul {
 ul li {
 	display: inline-block;
 }
-
+ul li a {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 /*---------------------------------
  * HEADER
  ---------------------------------*/
 header {
-	z-index: 10;
-}
-header,
-.header-contact,
-.header-menu {
 	display: block;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	z-index: 20;
+	border-top: 2px solid rgb(189,163,251);
 }
-header > .header-contact {
-	display: block;
-	width: 100%;
-}
-header > .header-contact > h5 {
-	display: block;
-	box-sizing: border-box;
-	width: 90%;
-	margin: 0.50em auto;
-	text-align: center;
-	color: #707070;
-}
-.header-menu {
-	width: 100%;
-	margin: 0 auto;
-}
-.header-menu > #main-menu-1,
-.header-menu > #main-menu-2 {
+.logo,
+.header-contact-1 {
 	display: inline-block;
 	box-sizing: border-box;
-	width: 49%;
-	margin: 0 auto;
-	text-align: center;
+	font-size: 0;
 }
 .logo {
-	display: none;
-	position: absolute;
-	top: 15px;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	text-align: center;
+	width: 25%;
+	vertical-align: middle;
 }
 .logo > img {
-	display: none;
 	width: 100%;
-	max-width: 200px;
+	max-width: 175px;
 	height: auto;
-	margin: 0 auto;
 
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
-.logo > img:hover {
-	filter: url(#drop-shadow);
-	-webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
-	filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
-}
-
-@media screen and (min-width: 769px) {
-	header {
-		border-bottom: 1px solid rgba(124,111,255,0.33);
-	}
-	header > .header-contact > h5 {
-		display: inline-block;
-		width: 49%;
-	}
-	.logo {
-		display: block;
-	}
-	.logo > img {
-		display: block;
-	}
-}
-
-/* MAIN MENU
----------------------------------*/
-
-/* SHOW MENU */
-#main-menu-mobile .show {
-	max-height: 1000px;
-
-	-webkit-transition: max-height 0.5s;
-    -moz-transition: max-height 0.5s;
-    transition: max-height 0.5s;
-}
-
-.header-menu {
-	display: none;
-}
-.menuIcon {
-	display: block;
-	width: 95%;
+.header-contact-1 {
+	width: 70%;
 	margin: 0 auto;
-	margin-top: 0.50em;
-	padding: 0.50em;
-	border: 1px solid rgba(124,111,255,0.60);
-	background: #fff;
+	vertical-align: middle;
+}
+.header-contact-1 h5,
+.header-contact-2 h5 {
+	display: block;
 	text-align: center;
 	font-family: 'Hind Siliguri', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #707070;
+}
+.header-contact-2 {
+	display: none;
+}
+.header-menu {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.header-menu h2 {
+	display: block;
+	width: 90%;
+	margin: 0.50em auto;
+	padding: 0.50em;
+	text-align: center;
 	font-size: 1.50em;
+	background: rgba(245,245,245,0.90);
+	border: 1px solid rgba(189,163,251,0.60);
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-	z-index: 500;
 }
-.menuIcon:hover {
-	cursor: pointer;
-	text-decoration: none;
+.show {
+	display: block;
+	max-height: 999em;
 }
-.menuIcon:active {
-	text-decoration: none;
-}
+
 #main-menu {
 	position: absolute;
-	height: auto;
+	display: none;
+	width: 90%;
+	height: 100%;
+	top: 100%;
 	left: 0;
 	right: 0;
-	max-height: 0;
-	width: 95%;
-	padding: 0;
+	bottom: 0;
 	margin: 0 auto;
+	padding: 0;
 	text-align: center;
-    overflow: hidden;
-	
-	-webkit-transition: max-height 0.5s;
-    -moz-transition: max-height 0.5s;
-    transition: max-height 0.5s;
+	font-size: 16px;
+	max-height: 0;
+
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 }
 #main-menu li {
 	display: block;
 	background: #fff;
-	width: 100%;
-	padding: 0.250em;
-	border: 1px solid rgba(92,169,255,0.6);
+	padding: 0.50em 0;
+	border: 1px solid #ddd;
+	border-top: 1px solid transparent;
 }
 #main-menu li a {
-	display: block;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	padding: 0.50em 0.250em;
+	padding: 0.50em 0;
+	font-family: 'Homenaje','Arial','Helvetica',sans-serif;
 	font-size: 1.250em;
-	border-bottom: 1px solid rgba(92,169,255,0.6);
 }
-#main-menu li a:nth-last-child(1) {
-	border-bottom: 1px solid transparent;
-}
-#main-menu-1,
-#main-menu-2 {
-	display: inline-block;
+.header-menu a:hover,
+.header-menu a:active {
+	text-decoration: none;
 }
 
 @media screen and (min-width: 769px) {
-	.menuIcon {
-		display: none;
+	header {
+		border: 0 solid transparent;
+		height: 100%;
 	}
-	.header-menu {
-		display: block;
+	.logo {
+		width: 30%;
+		padding: 15px;
+		vertical-align: top;
+		text-align: center;
 	}
-	#main-menu-1,
-	#main-menu-2 {
-		display: inline-block;
+	.logo img {
+		width: 100%;
+		height: auto;
 		margin: 0 auto;
 		text-align: center;
+
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 	}
-	#main-menu-1 ul {
+	.logo > img:hover {
+		filter: url(#drop-shadow);
+		-webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+		filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+	}
+	.header-right {
+		display: inline-block;
+		width: 69%;
+		height: 100%;
+		padding: 15px;
+		vertical-align: middle;
+	}
+	.header-contact-1 {
+		display: none;
+	}
+	.header-contact-2 {
+		display: block;
 		text-align: center;
 	}
-	#main-menu-2 ul {
-		text-align: center;
+	.header-contact-2 h5 {
+		display: inline-block;
+		font-size: 1.250em;
+		padding: 0 15px;
 	}
-	#main-menu-1 ul li,
-	#main-menu-2 ul li {
-		margin-right: 1em;
+	.header-menu h2 {
+		display: none;
 	}
-	#main-menu-1 ul li:nth-child-last(1),
-	#main-menu-2 ul li:nth-child-last(1) {
-		margin-right: 0 !important;
-	}
-	#main-menu-1 ul li a,
-	#main-menu-2 ul li a {
+	#main-menu {
 		position: relative;
-		font-family: 'Homenaje', sens-serif;
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin-top: 0.50em;
+		vertical-align: middle;
+	}
+	#main-menu li {
+		display: inline-block;
+		border: 1px solid transparent;
+		padding: 0 0.250em;
+	}
+	#main-menu li a {
+		padding: 0 0.250em;
 		font-size: 1.50em;
-		padding: 0.250em 0;
-		margin: 0 0.750em;
-		color: #5CA9FF;
-		letter-spacing: 1px;
 	}
-	#main-menu-1 ul li a:hover,
-	#main-menu-2 ul li a:hover {
-		text-decoration: none;
+
+	/*
+	#main-menu a::after {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: rgba(92,169,255,0.4);
+		content: '';
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+		-webkit-transform: translateY(10px);
+		-moz-transform: translateY(10px);
+		transform: translateY(10px);
 	}
-}
 
-.header-menu a::after {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: rgba(92,169,255,0.4);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	transform: translateY(10px);
+	#main-menu a:hover::after,
+	#main-menu a:focus::after {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+	*/
 }
-
-.header-menu a:hover::after,
-.header-menu a:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
-}
-
 /*---------------------------------
  * MAIN page SECTION
  *---------------------------------*/
@@ -321,9 +296,9 @@ header > .header-contact > h5 {
 	font-family: 'Cookie',cursive,'Helvetica', serif;
 	font-size: 3.5em;	
 	text-align: center;
-	color: rgb(124,111,255);
+	color: rgb(189,163,251);
 
-	background-image: -webkit-linear-gradient(92deg,rgb(124,111,255),rgba(92,169,255,0.60));
+	background-image: linear-gradient(92deg,rgb(124,111,255),rgba(92,169,255,0.60));
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -747,7 +722,7 @@ header > .header-contact > h5 {
 #form {
 	/*
 	background: rgba(189,163,251,1); */
-	background: -webkit-linear-gradient(92deg,rgba(189,163,251,1),rgba(189,163,251,0.80));
+	background: linear-gradient(92deg,rgba(189,163,251,1),rgba(189,163,251,0.80));
 }
 #form-content {
 	width: 100%;
