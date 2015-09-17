@@ -96,6 +96,12 @@ $(function() {
     });
 });
 
+$(function() {
+    $(".google-map-overlay").click(function(e) {
+        $(".google-map-overlay").css( "display", "none" );
+        e.preventDefault();
+    });
+});
 
 //Sort random function
 function random(owlSelector) {

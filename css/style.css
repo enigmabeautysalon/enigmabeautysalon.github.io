@@ -247,14 +247,14 @@ header {
 .section-content {
 	padding: 2em 15px;
 }
-#main-topic {
+.main-topic {
 	font-family: 'Cookie',cursive,'Helvetica', serif;
 	font-size: 3em;
 	text-align: center;
 	margin: 0.250em 0;
 	color: #404040;
 }
-#main-description {
+.main-description {
 	font-family: 'Hind Siliguri', 'Arial', sans-serif;
 	font-size: 1em;
 	font-weight: 300;
@@ -270,10 +270,10 @@ header {
 	.section-content {
 		padding: 5em 15px;
 	}
-	#main-topic {
+	.main-topic {
 		font-size: 4em;
 	}
-	#main-description {
+	.main-description {
 		font-size: 1.50em;
 	}
 }
@@ -418,33 +418,33 @@ header {
 .main-services-content {
 	
 }
-#service-tables {
+.service-tables {
 	width: 90%;
 	height: 100%;
 	margin: 0 auto;
 	text-align: center;
 }
 
-#service-tables > .owl-wrapper-outer {
+.service-tables > .owl-wrapper-outer {
 	padding: 15px 0;
 }
 
 /* TABLES
 ---------------------------------*/
 
-.services-item {
+.service-item {
 	width: auto;
 	min-width: 200px;
 	min-height: 400px;
 	border: 1px solid #ddd;
 	margin: 0 1.5em;
 }
-.services-item table {
+.service-item table {
 	width: 100%;
 	text-align: center;
 	margin: 0 auto;
 }
-.services-item {
+.service-item {
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 /*
