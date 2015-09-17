@@ -1,1 +1,42 @@
-# enigmabeautysalon.github.io
+# [Enigma Ladies Salon Website](https://enigmaladiessalon.com)
+
+A website for Enigma Ladies Salon, based in Dubai, U.A.E.
+
+## Resources / Plugins Used
+
+* HTML5 Boilerplate Template
+* Bootstrap Grid System
+* JQuery
+* Owl Carousel Slider
+* Font Awesome
+* Gulp
+  * Lint
+  * SASS (SCSS)
+  * Stylus CSS
+  * Concat
+  * Livereload
+* Mailthis.to (Contact Form)
+
+## Fonts
+
+#### Cookie
+The cursive font used for Headers / Sub headers
+
+#### Homenaje
+Navigation / Menu font
+
+#### Hind Siliguri
+Paragraph / Captions / Etc
+
+
+## Responsiveness
+
+**There's only two layouts for this website.**
+
+For devices with the width size of 768px and below (Tablets and Phones).
+And devices equal or greater than 769px (Desktop).
+
+
+##### Web Hosting provided by Github Pages
+##### Domain Registered at Namecheap.com
+##### Optimizations and configuration services by Cloudflare.com
