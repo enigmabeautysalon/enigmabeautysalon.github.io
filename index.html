@@ -19,8 +19,51 @@
         <link href='https://fonts.googleapis.com/css?family=Hind+Siliguri:400,300,500' rel='stylesheet' type='text/css'>
 
         <!-- STYLE SHEETS -->
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/style.css">
+        <style>
+            body {
+                background: url('img/crossword.png') repeat;
+                height: 100%;
+                font-size: 100%;
+            }
+            .under-construction {
+                width:  100%;
+                height: 100%;
+                text-align:  center;
+            }
+            .under-construction-container {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            h1,h2,h3,p {
+                font-family: 'Hind Siliguri','Helvetica','Arial';
+                font-weight: 300;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+            .under-construction-logo img {
+                width: 280px;
+                height: auto;
+
+                filter: url(#drop-shadow);
+                -webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+                filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+
+                -webkit-transition: all 0.15s ease-in-out;
+                -moz-transition: all 0.15s ease-in-out;
+                -o-transition: all 0.15s ease-in-out;
+                transition: all 0.15s ease-in-out;
+                transition-delay: 0.1s;
+            }
+            .under-construction-logo img:hover {
+                transform: rotate(20deg);
+                
+                filter: url(#drop-shadow);
+                -webkit-filter: none;
+                filter: none;
+            }
+        </style>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -28,7 +71,6 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
         <div class="under-construction">
             <div class"under-construction-container">
                 <div class="under-construction-logo">
@@ -45,8 +87,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="dist/js/all.min.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

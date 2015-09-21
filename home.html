@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Enigma Ladies Salon | Dubai</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -25,8 +25,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <header id="header">
+        <header id="header" class="main-header">
         
             <div class="header-contact">
                 <h5 id="header-contact">Villa 1276, Al Wasl Road, Umm Suqqeim 3, Dubai, U.A.E.</h5>
@@ -41,7 +40,7 @@
                 <a id="menu-expand" href="#menuExpand">
                     MENU
                 </a>
-                <ul id="main-menu" class="">
+                <ul id="main-menu" class="nav-hover sub-menu">
                     <li><a href="#about">About</a></li>
                     <li><a href="#main-services">Services</a></li>
                     <li><a href="">Promotions</a></li>
@@ -80,6 +79,25 @@
                 <p class="main-description">
                     It also has services on hair such as cutting, styling and coloring, a Makeup Section and Spa Services that offer ultra-chic, ultra-comfortable treatment rooms with the finest spa linens and equipment. The Spa offers massages in a variety of styles – traditional Swedish Massage, Deep Tissue work, Hot Stone Massage, Reflexology, Thai etc.
                 </p>
+                <div class="about-gallery" data-chocolat-title="About Gallery">
+                    <ul id="about-gallery" class="chocolat-parent">
+                        <li><a class="chocolat-image" href="img/salon/1.jpg">
+                            <img src="img/salon/mini/1.jpg" alt="">
+                        </a></li>
+                        <li><a class="chocolat-image" href="img/salon/2.jpg">
+                            <img src="img/salon/mini/2.jpg" alt="">
+                        </a></li>
+                        <li><a class="chocolat-image" href="img/salon/3.jpg">
+                            <img src="img/salon/mini/3.jpg" alt="">
+                        </a></li>
+                        <li><a class="chocolat-image" href="img/salon/4.jpg">
+                            <img src="img/salon/mini/4.jpg" alt="">
+                        </a></li>
+                        <li><a class="chocolat-image" href="img/salon/5.jpg">
+                            <img src="img/salon/mini/5.jpg" alt="">
+                        </a></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -88,7 +106,7 @@
                 <h2 class="main-topic">The Team</h2>
                 <p class="main-description">Description.</p>
                 
-
+                
             </div>
         </section>
 
@@ -484,9 +502,6 @@
                 <p class="main-description">
                     Call <span id="em">043280033</span> or email us at <span id="em">salon@enigmabeauty.net</span>
                 </p>
-                <p class="main-description">
-                    We welcome any inquiry, questions, feedbacks or booking request :)
-                </p>
                 <div id="form-content">
                      <form action="http://mailthis.to/enigma" id="contact-me" role="form" method="POST">
 
@@ -496,7 +511,7 @@
 
                             <input type="tel" id="form-mobile" name="mobile" placeholder="Phone / Mobile Number ( Optional )" />
 
-                            <textarea type="text" name="message" placeholder="* Message" required></textarea>
+                            <textarea type="text" name="message" placeholder="* We welcome any inquiry, questions, feedbacks or booking request :)" required></textarea>
 
                             <input type="submit" id="form-submit" value="Send">
 
@@ -519,8 +534,9 @@
                 -->
                 <div class="google-map">
                     <div class="google-map-overlay">Tap to view map</div>
+                    <!--
                     <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Enigma+Ladies+Saloon+-+Umm+Suqeim+-+Dubai+-+United+Arab+Emirates&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU">
-                    </iframe>
+                    </iframe> -->
                 </div>
                 <p class="main-description">
                         Villa 1276, Al Wasl Road, Umm Suqqeim 3, P.O. Box 32483, Dubai U.A.E
@@ -530,7 +546,8 @@
             </div>
         </div>
         </section>
-
+        
+        <!--
         <section id="social-media-section" class="social-media-section">
             <div class="social-media-content section-content">
 
@@ -544,6 +561,7 @@
 
             </div>
         </section>
+        -->
 
         <footer>
             <a href="#header">
@@ -551,15 +569,14 @@
                 </a>
             <div class="footer-content">
                 <nav id="footer-menu">
-                    <ul>
-                        <li>
-                            <a href="">About</a>
-                            <a href="">Services</a>
-                            <a href="">News / Blog</a>
-                            <a href="">Promotions</a>
-                            <a href="">Gallery</a>
-                            <a href="">Contact</a>
-                        </li>
+                    <ul class="nav-hover">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">News / Blog</a></li>
+                        <li><a href="">Promotions</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Contact</a></li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -609,7 +626,48 @@
                     pagination : false
                   });
             });
+            
+            // About Gallery Images
+            $(function(){
+                $('.chocolat-parent').Chocolat({
+                    loop           : true,
+                    imageSize     : 'contain',
+                    overlayOpacity : 0.6
+                });
+            });
 
+                /* Sticky header scroll
+                function scrollnfix() {
+                    window.addEventListener('scroll', function(e){
+                        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                        shrinkOn = 165, //header height + body padding - nav height
+                        navi = document.querySelector("#main-menu");
+                        if (distanceY > shrinkOn) {
+                            navi.setAttribute('class', 'sub-menu-bg');
+                            $('#main-menu').css('background', 'rgba(240,240,240,0.90)');
+                        } else {
+                            if (navi.className == 'sub-menu-bg'){
+                                navi.setAttribute('class', 'notsticky');
+                                $('#main-menu').css('background', 'transparent');
+                            }
+                        }
+                    });
+                }
+
+                function addLoadEvent(func) {
+                    var oldonload = window.onload;
+                    if (typeof window.onload != 'function') {
+                        window.onload = func;
+                    } else {
+                        window.onload = function() {
+                            if (oldonload) {
+                                oldonload();
+                            }
+                            func();
+                        }
+                    }
+                }
+                addLoadEvent(scrollnfix()); */
         </script>
         
     </body>

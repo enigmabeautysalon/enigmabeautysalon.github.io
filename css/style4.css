@@ -43,6 +43,12 @@ table,
 #location-map .google-map .google-map-overlay {
   font-family: 'Hind Siliguri', 'Arial';
 }
+.box-shadow-thin,
+.service-item {
+  moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
 .box-shadow-1 {
   -webkit-box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.33);
   -moz-box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.33);
@@ -50,17 +56,16 @@ table,
 }
 .box-shadow-2,
 .logo img,
-.header-menu #menu-expand,
-.service-item {
+.header-menu #menu-expand {
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.33);
   -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.33);
   box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.33);
 }
 .box-shadow-bottom,
 .sub-header .sub-menu-bg {
-  -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.33);
-  -moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.33);
-  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.33);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
 }
 .box-shadow-around,
 footer i#go-top:hover {
@@ -76,8 +81,9 @@ footer i#go-top:hover {
   transition: all 0.5s linear;
 }
 .all-3s,
+.nav-hover a:after,
+.sub-header .sub-header-overlay,
 .sub-header #sub-menu ul li a,
-.sub-header #sub-menu ul li a:after,
 .header-menu #main-menu {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -135,6 +141,25 @@ footer i#go-top {
   left: 0;
   right: 0;
 }
+.nav-hover a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: auto;
+  height: 2px;
+  background: #444;
+  transform: translateY(100%);
+}
+.nav-hover a:hover:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+a:focus {
+  text-decoration: none;
+}
 body {
   position: relative;
   height: 100%;
@@ -142,12 +167,6 @@ body {
   margin-bottom: 0;
   color: #924992;
   background: #fff;
-  background: url("../img/crossword.png") repeat;
-}
-@media (min-width: 769px) {
-  body {
-    margin-bottom: 125px;
-  }
 }
 h1,
 h2,
@@ -274,7 +293,7 @@ form textarea {
  * *****************************************************/
 /* HEADER - INDEX PAGE
  ******************************************************/
-#header {
+.main-header {
   position: relative;
   display: block;
   width: 100%;
@@ -301,10 +320,9 @@ form textarea {
  ******************************************************/
 .sub-header {
   position: relative;
-  display: block;
+  display: table;
   width: 100%;
-  height: 150px;
-  background: linear-gradient(45deg, #7c6fff, #fcff90);
+  height: 300px;
   z-index: 10;
 }
 .sub-header .sub-header-overlay {
@@ -319,8 +337,16 @@ form textarea {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-  opacity: 0.8;
+  opacity: 1;
   z-index: -1;
+}
+.sub-header:hover .sub-header-overlay {
+  opacity: 0.6;
+}
+.sub-header .sub-header-content {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
 }
 .sub-header .sub-header-title {
   position: relative;
@@ -329,6 +355,7 @@ form textarea {
   text-align: center;
   font-size: 7.5em;
   margin: 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
 .sub-header #sub-menu {
   width: 100%;
@@ -343,28 +370,12 @@ form textarea {
   text-align: center;
 }
 .sub-header #sub-menu ul li {
-  margin: 0.25em;
+  margin: 0.25em 1em;
 }
 .sub-header #sub-menu ul li a {
   position: relative;
-  padding: 0.5em;
+  padding: 0.5em 0;
   font-size: 2.25em;
-}
-.sub-header #sub-menu ul li a:after {
-  position: absolute;
-  display: block;
-  content: '';
-  left: 0;
-  right: 0;
-  opacity: 0;
-  width: 100%;
-  height: 2px;
-  background: #444;
-  transform: translateY(100%);
-}
-.sub-header #sub-menu ul li a:hover:after {
-  opacity: 1;
-  transform: translateY(0);
 }
 .sub-header .sub-menu {
   position: relative;
@@ -429,12 +440,13 @@ form textarea {
   z-index: 200;
 }
 .header-menu #main-menu li {
+  position: relative;
   display: block;
-  margin: 0.25em 0.35em;
+  margin: 0.25em 1em;
   z-index: 250;
 }
 .header-menu #main-menu li a {
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0;
   font-size: 2.25em;
   z-index: 300;
 }
@@ -461,7 +473,6 @@ form textarea {
  ******************************************************/
 .main-section {
   height: 100%;
-  min-height: 0;
 }
 .main-section-content {
   position: relative;
@@ -492,11 +503,11 @@ form textarea {
 }
 @media (min-width: 769px) {
   .main-section {
-    min-height: 100vh;
+    height: calc(100vh - 190px);
   }
   .main-section-content {
-    top: 50%;
-    transform: translateY(50%);
+    top: 35%;
+    transform: translateY(-35%);
   }
   #main-title {
     font-size: 10em;
@@ -512,6 +523,7 @@ form textarea {
   position: relative;
   background: linear-gradient(45deg, #7c6fff, #fcff90);
   z-index: 10;
+  height: 100%;
 }
 .about-section-overlay {
   position: absolute;
@@ -527,8 +539,42 @@ form textarea {
   opacity: 0.8;
   z-index: -1;
 }
+.about-gallery {
+  display: block;
+  width: 100%;
+  max-width: 1024px;
+  margin: 2em auto;
+  text-align: center;
+}
+.about-gallery #about-gallery {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+}
+.about-gallery #about-gallery li {
+  box-sizing: border-box;
+  width: 20%;
+  display: inline-block;
+  padding: 0 0.25em;
+}
+.about-gallery #about-gallery li img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+.about-gallery #about-gallery li:hover {
+  cursor: pointer;
+}
+/* TEAM SECTION / SECTION 3
+ ******************************************************/
+.team-section {
+  background: #a1bcf9;
+}
 /* SERVICES SECTION / SECTION 4
  ******************************************************/
+.main-services,
 .service-tables {
   width: 90%;
   height: 100%;
@@ -546,10 +592,10 @@ form textarea {
   min-height: 400px;
   margin: 0.25em auto;
   text-align: center;
-  border: 1px solid #eee;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  background: #fefaec;
 }
 table {
   font-size: 100%;
@@ -569,7 +615,7 @@ table thead {
   font-weight: 400;
   text-align: center;
   color: #fefaec;
-  background: #dea1f9;
+  background: #ab8bfa;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
@@ -658,6 +704,7 @@ table tbody td:nth-child(2) {
   .owl-theme i,
   .owl-buttons i {
     font-size: 5em;
+    padding: 0.25em;
   }
   .owl-theme .owl-controls .owl-buttons .owl-prev {
     left: -50px;
@@ -668,9 +715,17 @@ table tbody td:nth-child(2) {
 }
 /* BRANDS SECTION / SECTION 6
  ******************************************************/
+.main-brands {
+  background: #ab8bfa;
+  height: 100%;
+  min-height: 50vh;
+}
 .main-brands #brands-slider {
   text-align: center;
   padding: 2.5em 0;
+}
+.main-brands .main-brands-content {
+  vertical-align: middle;
 }
 /* CONTACT AND LOCATION SECTION / SECTION 6
  ******************************************************/
@@ -769,7 +824,7 @@ table tbody td:nth-child(2) {
   height: 100%;
 }
 .contact-section .contact-section-content {
-  padding: 3em 0;
+  padding: 0;
 }
 .contact-section h2 {
   margin: 0;
@@ -1004,6 +1059,7 @@ footer i#go-top:before {
 }
 footer .footer-content {
   position: relative;
+  display: block;
   line-height: 1.6;
   padding: 2.5em;
 }
@@ -1011,27 +1067,35 @@ footer .footer-content ul {
   padding: 0;
 }
 footer .footer-content ul li {
+  position: relative;
+  display: block;
   margin: 0 0.25em;
 }
 footer .footer-content ul li a {
-  display: block;
   font-size: 2em;
   padding: 0 0.5em;
-  color: #924992;
+  color: #442d7c;
 }
 @media (min-width: 769px) {
   footer {
-    position: fixed;
+    display: table;
     height: 100px;
-    z-index: -1;
   }
   footer .footer-content {
-    line-height: 100px;
+    display: table-cell;
+    vertical-align: middle;
     padding: 0;
     transform: translateY(0);
   }
-  footer .footer-content ul li a {
+  footer .footer-content ul {
+    margin: 0;
+  }
+  footer .footer-content ul li {
     display: inline-block;
+    margin: 0 1em;
+  }
+  footer .footer-content ul li a {
+    padding: 0.25em 0;
   }
 }
 /* SUB SECTIONS  / SERVICES PAGE
@@ -1044,11 +1108,17 @@ footer .footer-content ul li a {
   z-index: -1;
 }
 .sub-section .sub-section-content {
+  width: 80%;
+  max-width: 1024px;
+  margin-left: 20%;
   padding: 3em 15px;
 }
 .sub-section .sub-section-content p {
-  font-size: 3em;
+  font-size: 2.5em;
 }
-.large {
-  font-size: 5em;
+/* FIXES
+ *
+ */
+.chocolat-img {
+  width: 100%;
 }
