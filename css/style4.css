@@ -24,7 +24,7 @@ footer .footer-content ul li a {
 .main-topic,
 .sub-header .sub-header-title,
 #main-title {
-  font-family: 'Cookie', 'Helvetica';
+  font-family: 'Great Vibes', 'Helvetica';
 }
 .hind,
 h1,
@@ -38,10 +38,15 @@ a,
 .main-description,
 .header-menu #menu-expand,
 #sub-title,
-table,
 #service-button,
+#form-content #form-submit,
 #location-map .google-map .google-map-overlay {
+  font-family: 'Playfair Display', 'Georgia';
+}
+.para,
+table {
   font-family: 'Hind Siliguri', 'Arial';
+  font-weight: 300;
 }
 .box-shadow-thin,
 .service-item {
@@ -55,7 +60,6 @@ table,
   box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.33);
 }
 .box-shadow-2,
-.logo img,
 .header-menu #menu-expand {
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.33);
   -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.33);
@@ -69,6 +73,12 @@ table,
 }
 .box-shadow-around,
 footer i#go-top:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+.box-shadow-around-2,
+.about-gallery #about-gallery {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
@@ -204,7 +214,7 @@ p {
   margin-bottom: 1em;
 }
 #em {
-  font-weight: 400;
+  font-weight: 700;
 }
 @media (min-width: 769px) {
   h1 {
@@ -272,6 +282,7 @@ form textarea {
   line-height: 1.4;
   text-align: center;
   color: #505050;
+  margin-bottom: 1em;
 }
 @media (min-width: 769px) {
   .section-content {
@@ -281,10 +292,11 @@ form textarea {
     font-size: 6em;
   }
   .main-description {
-    font-size: 2em;
+    font-size: 1.75em;
     line-height: 1.6;
     max-width: 700px;
     margin: 0 auto;
+    margin-bottom: 1em;
   }
 }
 /* *****************************************************
@@ -545,7 +557,8 @@ form textarea {
   display: block;
   width: 100%;
   max-width: 1024px;
-  margin: 2em auto;
+  margin: 5em auto;
+  margin-top: 5em;
   text-align: center;
 }
 .about-gallery #about-gallery {
@@ -576,14 +589,8 @@ form textarea {
 }
 /* TEAM SECTION / SECTION 3
  ******************************************************/
-.team-section {
-  background: #a1bcf9;
-}
 /* SERVICES SECTION / SECTION 4
  ******************************************************/
-.main-services {
-  background: url("../img/food.png") repeat;
-}
 .service-tables {
   width: 90%;
   height: 100%;
@@ -728,13 +735,18 @@ table tbody td:nth-child(2) {
 /* BRANDS SECTION / SECTION 6
  ******************************************************/
 .main-brands {
-  background: #a1f9b2;
+  background: #f2f2f2;
   height: 100%;
   min-height: 50vh;
 }
 .main-brands #brands-slider {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
   padding: 2.5em 0;
+}
+.main-brands #brands-slider .item {
+  margin: 0 1em;
 }
 .main-brands .main-brands-content {
   vertical-align: middle;
@@ -880,6 +892,7 @@ table tbody td:nth-child(2) {
   border: 1px solid #924992;
   color: #924992;
   margin: 0 auto;
+  padding: 0.5em;
 }
 #location-map .google-map {
   position: relative;
@@ -916,6 +929,7 @@ table tbody td:nth-child(2) {
 @media (min-width: 769px) {
   .contact-section {
     font-size: 0;
+    height: 100%;
     min-height: 80vh;
   }
   .contact-section .contact-section-content {
@@ -953,7 +967,7 @@ table tbody td:nth-child(2) {
     width: 50%;
     max-width: 200px;
     background: transparent;
-    font-size: 1.75em;
+    font-size: 2em;
   }
   #location-map {
     height: 100%;
