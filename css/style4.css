@@ -73,8 +73,7 @@ footer i#go-top:hover {
   -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
 }
-.all-5s,
-.sub-header #sub-menu {
+.all-5s {
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
@@ -83,6 +82,7 @@ footer i#go-top:hover {
 .all-3s,
 .nav-hover a:after,
 .sub-header .sub-header-overlay,
+.sub-header #sub-menu,
 .sub-header #sub-menu ul li a,
 .header-menu #main-menu {
   -webkit-transition: all 0.3s linear;
@@ -92,6 +92,7 @@ footer i#go-top:hover {
 }
 .all-1-5s,
 .ghost-button,
+.about-gallery #about-gallery li img,
 #service-button,
 #form-content #form-submit,
 .social-media-section #social-media a li,
@@ -102,7 +103,7 @@ footer i#go-top {
   transition: all 0.15s linear;
 }
 .button:hover {
-  background: #442d7c;
+  background: #924992;
   color: #fefaec;
 }
 .ghost-button,
@@ -123,8 +124,8 @@ footer i#go-top {
 .ghost-button:hover,
 #service-button:hover,
 #form-content #form-submit:hover {
-  background: #442d7c;
-  border: 1px solid #442d7c;
+  background: #924992;
+  border: 1px solid #924992;
   color: #fff;
 }
 .hr-above::before {
@@ -363,6 +364,7 @@ form textarea {
   padding: 0.35em 0;
   z-index: 100;
   background: transparent;
+  color: #924992;
 }
 .sub-header #sub-menu ul {
   margin: 0.35em 0;
@@ -554,15 +556,20 @@ form textarea {
   font-size: 0;
 }
 .about-gallery #about-gallery li {
+  position: relative;
   box-sizing: border-box;
   width: 20%;
   display: inline-block;
   padding: 0 0.25em;
 }
+.about-gallery #about-gallery li:hover img {
+  opacity: 0.6;
+}
 .about-gallery #about-gallery li img {
   width: 100%;
   max-width: 250px;
   height: auto;
+  z-index: 50;
 }
 .about-gallery #about-gallery li:hover {
   cursor: pointer;
@@ -574,7 +581,9 @@ form textarea {
 }
 /* SERVICES SECTION / SECTION 4
  ******************************************************/
-.main-services,
+.main-services {
+  background: url("../img/food.png") repeat;
+}
 .service-tables {
   width: 90%;
   height: 100%;
@@ -592,10 +601,7 @@ form textarea {
   min-height: 400px;
   margin: 0.25em auto;
   text-align: center;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background: #fefaec;
+  background: #f8f8f8;
 }
 table {
   font-size: 100%;
@@ -604,9 +610,6 @@ table {
   padding: 0;
   text-align: center;
   height: 100%;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 table thead {
   width: 100%;
@@ -616,8 +619,6 @@ table thead {
   text-align: center;
   color: #fefaec;
   background: #ab8bfa;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
 }
 table thead tr td {
   padding: 0.25em 0.5em;
@@ -654,21 +655,26 @@ table tbody td:nth-child(2) {
   width: 30%;
 }
 .owl-theme .owl-buttons i {
-  font-size: 3em;
+  font-size: 2em;
   color: #442d7c;
 }
 .owl-theme .owl-controls .owl-buttons div {
   top: 35%;
   tranform: translateY(35%);
   position: absolute;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0);
   opacity: 0.8;
+}
+.owl-theme .owl-controls .owl-buttons div i {
+  padding: 0.1em;
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev {
   left: -30px;
+  padding-left: 0.5em;
 }
 .owl-theme .owl-controls .owl-buttons .owl-next {
   right: -30px;
+  padding-right: 0.5em;
 }
 #service-button {
   position: relative;
@@ -706,17 +712,23 @@ table tbody td:nth-child(2) {
     font-size: 5em;
     padding: 0.25em;
   }
+  .owl-theme i .owl-controls .div,
+  .owl-buttons i .owl-controls .div {
+    background: rgba(255,255,255,0.6);
+  }
   .owl-theme .owl-controls .owl-buttons .owl-prev {
     left: -50px;
+    padding-left: 0.5em;
   }
   .owl-theme .owl-controls .owl-buttons .owl-next {
     right: -50px;
+    padding-right: 0.5em;
   }
 }
 /* BRANDS SECTION / SECTION 6
  ******************************************************/
 .main-brands {
-  background: #ab8bfa;
+  background: #a1f9b2;
   height: 100%;
   min-height: 50vh;
 }
@@ -841,9 +853,6 @@ table tbody td:nth-child(2) {
 #location-content {
   padding: 3em 15px;
 }
-#form {
-  background: #a1f9de;
-}
 #form-content {
   margin: 0 auto;
   text-align: center;
@@ -861,6 +870,7 @@ table tbody td:nth-child(2) {
   -moz-border-radius: 0;
   border-radius: 0;
   color: #924992;
+  box-shadow: 0;
 }
 #form-content textarea {
   min-height: 100px;
@@ -906,7 +916,7 @@ table tbody td:nth-child(2) {
 @media (min-width: 769px) {
   .contact-section {
     font-size: 0;
-    height: 80vh;
+    min-height: 80vh;
   }
   .contact-section .contact-section-content {
     padding: 5em 0;
@@ -932,7 +942,7 @@ table tbody td:nth-child(2) {
   }
   #form-content input,
   #form-content textarea {
-    padding: 0.75em;
+    padding: 1em;
     margin: 0.5 auto;
     width: 80%;
     -webkit-border-radius: 4px;
