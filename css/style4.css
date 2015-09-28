@@ -331,6 +331,36 @@ form textarea {
 }
 /* HEADER ALL SUB PAGES
  ******************************************************/
+.hamburger-menu {
+  position: absolute;
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 2.5em;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  z-index: 2000;
+  color: #442d7c;
+}
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+#mobile-nav {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  background: rgba(146,73,146,0.9);
+  visibility: hidden;
+  opacity: 0;
+}
 .sub-header {
   position: relative;
   display: table;
@@ -347,8 +377,8 @@ form textarea {
   right: 0;
   bottom: 0;
   background: url("../img/background2.jpg");
-  background-size: cover;
   background-position: top center;
+  background-size: cover;
   background-attachment: fixed;
   opacity: 1;
   z-index: -1;
@@ -377,6 +407,9 @@ form textarea {
   z-index: 100;
   background: transparent;
   color: #924992;
+}
+.sub-header #sub-menu h2 {
+  display: none;
 }
 .sub-header #sub-menu ul {
   margin: 0.35em 0;
@@ -482,6 +515,9 @@ form textarea {
   .header-menu #main-menu li a {
     font-size: 2.5em;
   }
+  .mobile-nav-container {
+    display: none;
+  }
 }
 /* LANDING PAGE / SECTION 1
  ******************************************************/
@@ -548,8 +584,8 @@ form textarea {
   right: 0;
   bottom: 0;
   background: url("../img/background2.jpg");
-  background-size: cover;
   background-position: top center;
+  background-size: cover;
   opacity: 0.8;
   z-index: -1;
 }
@@ -747,9 +783,6 @@ table tbody td:nth-child(2) {
 }
 .main-brands #brands-slider .item {
   margin: 0 1em;
-}
-.main-brands .main-brands-content {
-  vertical-align: middle;
 }
 /* CONTACT AND LOCATION SECTION / SECTION 6
  ******************************************************/
@@ -1134,7 +1167,7 @@ footer .footer-content ul li a {
 .sub-section .sub-section-content {
   width: 80%;
   max-width: 1024px;
-  margin-left: 20%;
+  margin: 0 auto;
   padding: 3em 15px;
 }
 .sub-section .sub-section-content p {

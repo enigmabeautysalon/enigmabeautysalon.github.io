@@ -24,11 +24,24 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        <div class="hamburger-menu"></div>
+        <nav id="mobile-nav">
+                <ul>
+                    <li><a href=""></a>1</li>
+                    <li><a href=""></a>2</li>
+                    <li><a href=""></a>3</li>
+                    <li><a href=""></a>4</li>
+                <li><a href=""></a>5</li>
+            </ul>
+        </nav>
 
         <header id="header" class="sub-header">
             <div class="sub-header-overlay"></div>
             <div class="sub-header-content">
                 <h1 class="sub-header-title">Services</h1>
+
+
                 <nav id="sub-menu" class="sub-menu">
                     <ul class="nav-hover">
                         <li><a href="">About</a></li>
@@ -107,6 +120,14 @@
                     }
                 });
             }
+
+            $(document).ready(function(){
+                "use strict";
+                $(".hamburger-menu").click(function(){
+                    $(".hamburger-menu").css("content", "'\f00d');
+                )}
+
+            )}
 
             function addLoadEvent(func) {
                 var oldonload = window.onload;
