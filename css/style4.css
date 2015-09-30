@@ -102,6 +102,7 @@ footer i#go-top:hover {
 .all-1-5s,
 .ghost-button,
 .about-gallery #about-gallery li img,
+.team #team li,
 #service-button,
 #form-content #form-submit,
 .social-media-section #social-media a li,
@@ -308,11 +309,8 @@ form textarea {
  ******************************************************/
 .main-header {
   position: relative;
-  display: block;
   width: 100%;
   height: 100%;
-  background: #fff;
-  z-index: 100;
 }
 .header-contact {
   position: absolute;
@@ -445,22 +443,16 @@ form textarea {
   width: 100%;
   height: auto;
 }
-.show {
-  display: block;
-  max-height: 999em;
-}
 .header-menu {
-  position: relative;
-  display: block;
   width: 100%;
   height: 100%;
-  margin: 1em auto;
+  margin: 0 auto;
   text-align: center;
-  z-index: 150;
 }
 .header-menu #menu-expand {
   position: relative;
   display: block;
+  top: 0;
   width: 90%;
   max-width: 320px;
   margin: 0 auto;
@@ -468,37 +460,37 @@ form textarea {
   font-size: 3em;
   text-decoration: none;
   border: 1px solid #eee;
-  z-index: 200;
 }
 .header-menu #main-menu {
-  position: relative;
+  position: fixed;
   display: none;
+  top: 0;
   margin: 0;
-  padding: 0;
+  padding: 1.5em 0;
   width: 100%;
-  height: 100%;
-  top: 100%;
+  height: auto;
   left: 0;
   right: 0;
   text-align: center;
   font-size: 100%;
   background: #fff;
-  max-height: 0;
-  z-index: 200;
+  z-index: 900;
+  -webkit-box-shadow: 0px 4px 6px -4px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 4px 6px -4px rgba(0,0,0,0.4);
+  box-shadow: 0px 4px 6px -4px rgba(0,0,0,0.4);
 }
 .header-menu #main-menu li {
   position: relative;
   display: block;
-  margin: 0.25em 1em;
-  z-index: 250;
+  margin: 0.25em 1.5em;
 }
 .header-menu #main-menu li a {
-  padding: 0.25em 0;
+  padding: 0.5em 0;
   font-family: 'Hind Siliguri', 'Helvetica', 'Arial';
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  z-index: 300;
+  z-index: 1000;
 }
 @media (min-width: 769px) {
   .logo {
@@ -508,9 +500,7 @@ form textarea {
     display: none;
   }
   .header-menu #main-menu {
-    position: relative;
     display: block;
-    margin: 1em 0;
   }
   .header-menu #main-menu li {
     display: inline-block;
@@ -526,6 +516,7 @@ form textarea {
  ******************************************************/
 .main-section {
   height: 100%;
+  min-height: 100vh;
 }
 .main-section-content {
   position: relative;
@@ -559,8 +550,8 @@ form textarea {
     height: calc(100vh - 190px);
   }
   .main-section-content {
-    top: 35%;
-    transform: translateY(-35%);
+    top: 50%;
+    transform: translateY(-50%);
   }
   #main-title {
     font-size: 8em;
@@ -595,22 +586,23 @@ form textarea {
 .main-description-content {
   position: relative;
   padding: 30px 0;
+/*
+	&::before
+		position absolute
+		content ''
+		top 0
+		left 0
+		right 0
+		width 200px
+		margin 0 auto
+		text-align center
+		height 1px
+		background $4
+		z-index 50
+	*/
 }
 .main-description-content p {
   margin-bottom: 0;
-}
-.main-description-content::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 250px;
-  margin: 0 auto;
-  text-align: center;
-  height: 2px;
-  background: #dafa8b;
-  z-index: 50;
 }
 .main-description-content::after {
   position: absolute;
@@ -618,11 +610,11 @@ form textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 250px;
+  width: 200px;
   margin: 0 auto;
   text-align: center;
   height: 2px;
-  background: #dafa8b;
+  background: #442d7c;
   z-index: 50;
 }
 .main-description-content p {
@@ -682,20 +674,32 @@ form textarea {
   color: #fa8bda;
 }
 .team #team li {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: auto;
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
   margin: 1em;
+  padding: 1em;
+  border: 1px solid transparent;
+}
+.team #team li:hover {
+  border: 1px solid #e7e7e7;
+  border-bottom: transparent;
+  -webkit-box-shadow: 0px 4px 10px -4px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 4px 10px -4px rgba(0,0,0,0.6);
+  box-shadow: 0px 4px 10px -4px rgba(0,0,0,0.6);
 }
 .team #team li a {
+  position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   margin: 0 auto;
 }
 .team #team li a img {
+  position: relative;
   width: 100%;
   max-width: 175px;
   margin: 0 auto;
@@ -707,6 +711,39 @@ form textarea {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  z-index: 100;
+}
+.team #team li .team-name {
+  position: relative;
+  padding: 0.5rem 0 1.25rem 0;
+  margin: 0;
+}
+.team #team li .team-name::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #442d7c;
+  width: 35px;
+  margin: 0 auto;
+}
+.team .team-hair,
+.team .team-nail {
+  display: block;
+}
+.team .team-align {
+  box-sizing: border-box;
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  height: auto;
+  vertical-align: top;
+}
+.team #team-align-massage {
+  width: 45%;
 }
 /* SERVICES SECTION / SECTION 4
  ******************************************************/
