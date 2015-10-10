@@ -1,0 +1,900 @@
+
+$1 = #442D7C
+$2 = #6341B4
+$3 = #fa8bda
+$4 = #DAFA8B
+
+
+
+$cyan = rgb(161,249,222) // Complementary
+$blue = rgb(161,188,249)
+$yellow = rgb(188,249,161)
+$green = rgb(161,249,178)
+$orange = rgb(249,178,161)
+$pink = rgb(222,161,249)
+$red = rgb(250,139,163)
+$violet = rgb(171,139,250)
+
+/*
+ * Mixins
+ */
+vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	{prop} args
+
+transform()
+	vendor('transform', arguments)
+
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
+
+box-shadow()
+	moz-box-shadow arguments
+	-webkit-box-shadow arguments
+	box-shadow arguments
+
+transition()
+	-webkit-transition arguments
+	-moz-transition arguments
+	-o-transition arguments
+	transition arguments
+
+transition-delay()
+	-webkit-transition-delay: arguments
+	-moz-transition-delay: arguments
+	-o-transition-delay: arguments
+	transition-delay: arguments
+
+transform()
+	-ms-transform arguments
+	-webkit-transform arguments
+	transform arguments
+
+font-awesome()
+	position absolute
+	content arguments
+	font-family FontAwesome
+	font-style normal
+	font-weight normal
+	text-decoration inherit
+
+button()
+	position relative
+	width auto
+	min-width 200px
+	max-width 300px
+	padding 15px
+	background $violet
+	border-bottom 2px solid darken($violet, 10%)
+	border-radius 5px
+	color #efefef
+	text-transform uppercase
+	font-family 'Roboto', 'Helvetica', 'Arial', sans-serif
+	font-weight 300
+	letter-spacing 1px
+	font-size 1.50rem
+	transition background 0.3s ease
+	&:hover
+		background lighten($violet, 15%)
+	&:active
+		top 2px
+		border-bottom 2px solid transparent
+		box-shadow  inset 0px 0px 20px -5px rgba(0,0,0,0.33)
+		
+nav-hover()
+	position relative
+	&::after
+		position absolute
+		content ''
+		bottom 0
+		left 0
+		right 0
+		transform translateY(100%)
+		width 90%
+		margin 0 auto
+		height 2px
+		background $3
+		border-radius 25%
+		visibility hidden
+		opacity 0
+		transition all 0.3s linear
+	&:hover
+		&::after
+			visibility visible
+			opacity 1
+			transform translateY(0)
+
+/*
+ * Defaults
+ */
+ul
+	padding 0
+	margin 0
+	list-style none
+
+h1,h2,h3,h4,h5,h6,p,a
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+p,a
+	font-family 'Roboto','Helvetica','Arial'sans-serif
+
+a
+	text-decoration none
+	&:hover,
+	&:focus
+		text-decoration none
+
+#em
+	font-weight 500
+
+body
+	position relative
+	width 100%
+	height 100%
+	-webkit-animation bugfix infinite 1s
+
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+
+.main-topic
+	position relative
+	display block
+	font-family 'Great Vibes','Helvetica','Arial', sans-serif
+	font-size 5rem
+	text-align center
+	color #303030
+	text-shadow 1px 1px 2px rgba(0,0,0,0.33)
+	&::after
+		position absolute
+		content ''
+		left 0
+		right 0
+		bottom 0
+		width 100px
+		margin 0 auto
+		height 2px
+		background $2
+		border-radius 50%
+.main-description
+	font-size 1.750rem
+	text-align center
+	padding 15px
+	max-width 700px
+	margin 0 auto
+	color #707070
+
+@media (min-width: 769px)
+	.main-topic
+		font-size 7rem
+	.main-description
+		font-size 2rem
+		font-weight 300
+
+// OWL Carousel Style
+.owl-theme
+	.owl-buttons
+		i
+			font-size 2em
+			color $1
+	.owl-controls
+		.owl-buttons div
+			position absolute
+			top 50%
+			background rgba(255,255,255,0.6)
+			opacity 0.8
+			i
+				padding 0.20em 0.10em
+.owl-theme .owl-controls .owl-buttons .owl-prev
+	left 5px
+	padding-left 0.50em
+.owl-theme .owl-controls .owl-buttons .owl-next
+	right 5px
+	padding-right 0.50em
+
+@media (min-width: 769px)
+	.owl-theme
+		.owl-buttons
+			i
+				font-size 3.50rem
+
+
+/*
+ * Main Style
+ */
+
+
+input#hamburger-menu[type=checkbox]
+	position fixed
+	display block
+	top -9999px
+	left -9999px
+	z-index 2100
+	&::before
+		position absolute
+		content "\f0c9"
+		top 9999px
+		left 9999px
+		padding 10px 15px
+		font-family FontAwesome
+		font-style normal
+		font-weight normal
+		font-size 2.50rem
+		text-shadow 1px 1px 2px rgba(0,0,0,0.4)
+		color $3
+		border-radius 2px
+		z-index 2000
+	&:focus,
+	&:hover,
+	&:active
+		outline none
+	label
+		display block
+		z-index 100
+		&:hover
+			cursor pointer
+
+input#hamburger-menu[type=checkbox]:checked
+	&::before
+		content "\f00d"
+		color #fff
+
+input#hamburger-menu[type=checkbox]:checked ~ .menu-overlay
+	visibility visible
+	opacity 1
+
+input#hamburger-menu[type=checkbox]:checked ~ header
+	position fixed
+	width auto
+	z-index 1000
+	.header-contact
+		a
+			color #efefef
+
+.menu-overlay
+	position fixed
+	display table
+	top 0
+	left 0
+	right 0
+	bottom 0
+	width 100%
+	height 100%
+	background rgba(37, 25, 68,0.90)
+	visibility hidden
+	opacity 0
+	transition all 0.3s linear
+	z-index 20
+	ul
+		display table-cell
+		width 100%
+		vertical-align middle
+		padding 1em
+		text-align center
+		li
+			display block
+			margin 1em 0
+			a
+				padding 1em
+				color #eee
+				font-family 'Roboto', 'Arial', 'Helvetica',sans-serif
+				font-weight 300
+				font-size 2.50rem
+				text-transform uppercase
+				letter-spacing -1px
+
+@media (min-width: 769px)
+	input#hamburger-menu[type=checkbox]
+		display none
+		label
+			display none
+
+
+/* **************************
+ * HEADER
+ */
+
+header
+	position absolute
+	display block
+	top 0
+	left 0
+	right 0
+	width auto
+	.header-contact
+		display block
+		text-align right
+		margin-right 0.50rem
+		a
+			position relative
+			z-index 1000
+			font-family 'Roboto','Helvetica','Arial',sans-serif
+			font-size 1.50rem
+			font-weight 300
+			padding 1rem
+			top 10px
+			color $2
+				
+	.header-menu
+		display none
+
+@media (min-width: 769px)
+	header
+		.header-contact
+			display none
+		.header-menu
+			position relative
+			display block
+			width 60%
+			min-width 700px
+			max-width 768px
+			margin 0 auto
+			margin-top 2rem
+			z-index 2000
+			#main-menu
+				margin 0 auto
+				padding 15px
+				text-align center
+				vertical-align middle
+				transition all 0.3s ease
+				z-index 2100
+				border-top 2px solid #707070
+				border-bottom 2px solid #707070
+				/*
+				&::before,
+				&::after
+					position absolute
+					content ''
+					display block
+					width 100%
+					left 0
+					right 0
+					height 2px
+					background $3
+				&::before
+					top 0
+				&::after
+					bottom 0
+				*/
+					
+				li
+					display inline-block
+					z-index 2200
+					a
+						font-family 'Roboto', 'Helvetica', 'Arial', sans-serif
+						font-weight 400
+						font-size 1.350rem
+						text-transform uppercase
+						padding 1rem
+						color #505050
+						z-index 2500
+						nav-hover()
+		.main-menu
+			position relative
+			transition all 0.5s ease
+
+		.sub-menu-bg
+			position fixed
+			width 100%
+			left 0
+			right 0
+			top 0
+			background url('../img/background3.jpg')
+			background-position top
+			transition all 0.3s ease
+			opacity 0.95
+
+/* **************************
+ * MAIN SECTION
+ */
+
+.main-section
+	position relative
+	display block
+	width 100%
+	height 100vh
+	background url('../img/background3.jpg')
+	background-size cover
+	background-position center
+	.main-section-content
+		position relative
+		top 50%
+		transform translateY(-50%)
+		padding 2em 15px
+		vertical-align middle
+		h1#main-title
+			font-family 'Great Vibes','Helvetica','Arial',sans-serif
+			font-size 6.50rem
+			text-align center
+			text-shadow 1px 1px 4px rgba(0,0,0,0.33)
+		h3#sub-title
+			font-family 'Roboto', 'Helvetica''Asrial',sans-serif
+			font-size 2rem
+			font-weight 400
+			text-align center
+	a
+		position absolute
+		content ''
+		width 50px
+		height 50px
+		bottom 1rem
+		left 0
+		right 0
+		margin 0 auto
+		text-align center
+		i
+			position relative
+			font-size 3.50rem
+			padding 0.50rem
+			
+@media (min-width: 769px)
+	.main-section
+		.main-section-content
+			h1#main-title
+				font-size 8rem
+		
+/* **************************
+ * ABOUT SECTION
+ */
+
+.about-section
+	position relative
+	width 100%
+	.about-section-content
+		padding 2em 15px
+		text-align center
+		p
+			position relative
+			padding 2em 0
+			&::after
+				position absolute
+				content ''
+				left 0
+				right 0
+				bottom 0
+				height 2px
+				width 150px
+				margin 0 auto
+				background $2
+				border-radius 50%
+		.about-gallery
+			padding 2em 0
+			ul
+				position relative
+				text-align center
+				li
+					display inline-block
+					width 30%
+					margin 2px auto
+					img
+						width 100%
+						box-shadow 1px 1px 2px rgba(0,0,0,0.33)
+
+@media (min-width: 769px)
+	.about-gallery
+		width 80%
+		max-width 1024px
+		margin 0 auto
+		margin-top 5em
+		#about-gallery
+			width 100%
+			li
+				box-sizing border-box
+				width 18%
+
+// Fix Lightbox
+.chocolat-img
+	width 100%
+
+/* **************************
+ * SERVICE SECTION
+ */
+
+.service-section
+	width 100%
+	.service-section-content
+		padding 5em 0
+		text-align center
+		.services
+			width 100%
+			margin 0 auto
+			padding 2em 0
+			text-align center
+			table
+				width 80%
+				max-width 275px
+				height 100%
+				min-height 350px
+				margin 1em auto
+				text-align left
+				box-shadow 0px 2px 2px rgba(0, 0, 0, 0.33)
+				background #f2f2f2
+				font-family 'Roboto','Arial','Helvetica',sans-serif
+				font-size 1.50rem
+				font-weight 300
+				vertical-align top
+				border-radius 5px
+				color #303030
+				thead
+					text-align left
+					tr
+						td
+							letter-spacing 1px
+							text-transform uppercase
+							padding 0.750rem 1rem
+							font-weight 500
+							font-size 1.750rem
+				tbody
+					padding 1rem 0
+					text-align left
+					tr
+						td
+							padding 0.50rem 1rem
+			#nails
+				thead
+					background $cyan
+				tbody
+					background rgba(161,249,222,0.50)
+			#hair
+				thead
+					background $blue
+				tbody
+					background rgba(161,188,249,0.50)
+			#spa
+				thead
+					background $orange
+				tbody
+					background rgba(249,178,161,0.50)
+			#waxing
+				thead
+					background $pink
+				tbody
+					background rgba(222,161,249,0.50)
+			#skin-care
+				thead
+					background $yellow
+				tbody
+					background rgba(188,249,161,0.50)
+			#make-up
+				thead
+					background $green
+				tbody
+					background rgba(161,249,178,0.50)
+		.button
+			button()
+
+	.owl-controls
+		.owl-buttons div
+			top 35%
+
+@media (min-width: 769px)
+	.service-section
+		.owl-theme .owl-controls .owl-buttons .owl-prev
+			left -5em
+			padding-left 0.50em
+		.owl-theme .owl-controls .owl-buttons .owl-next
+			right -5em
+			padding-right 0.50em
+		.service-section-content
+			.services	
+				width 80%
+				max-width 1440px
+
+/* **************************
+ * TEAM SECTION
+ */
+
+team-background()
+	background-size cover
+	background-position center top
+.team-section-content
+	text-align center
+	padding 5em 0
+	.owl-theme .owl-controls .owl-buttons .owl-prev
+		left 10px
+	.owl-theme .owl-controls .owl-buttons .owl-next
+		right 10px
+	.owl-controls
+		.owl-buttons div
+			top 45%
+.team
+	position relative
+	width 100%
+	margin 0 auto
+	padding 2em 0
+	text-align center
+
+	//Team Card Backgrounds Pictures
+	#anara
+		background url('../img/team/anara.jpg')
+		team-background()
+	#anya
+		background url('../img/team/anya.jpg')
+		team-background()
+	#bike
+		background url('../img/team/bike.jpg')
+		team-background()
+	#emily
+		background url('../img/team/emily.jpg')
+		team-background()
+	#gozel
+		background url('../img/team/gozel.jpg')
+		team-background()
+	#hayane
+		background url('../img/team/hayane.jpg')
+		team-background()
+	#jenya
+		background url('../img/team/jenya.jpg')
+		team-background()
+	#lyuda
+		background url('../img/team/lyuda.jpg')
+		team-background()
+	#maya
+		background url('../img/team/maya.jpg')
+		team-background()
+	#natalia
+		background url('../img/team/natalia.jpg')
+		team-background()
+	#sveta
+		background url('../img/team/sveta.jpg')
+		team-background()
+	#tanya
+		background url('../img/team/tanya.jpg')
+		team-background()
+	#tham
+		background url('../img/team/tham.jpg')
+		team-background()
+	#veronika
+		background url('../img/team/veronika.jpg')
+		team-background()
+	#yana
+		background url('../img/team/yana.jpg')
+		team-background()
+	#yulia
+		background url('../img/team/yulia.jpg')
+		team-background()
+	#yuliya
+		background url('../img/team/yuliya.jpg')
+		team-background()
+
+	.team-item
+		position relative
+		text-align center
+		width 80%
+		max-width 225px
+		height 100%
+		min-height 300px
+		margin 0 auto
+		border-radius 5px
+		z-index 10
+		&::after
+			position absolute
+			content ''
+			width 100%
+			height 100%
+			top 0
+			left 0
+			right 0
+			background linear-gradient(45deg,rgba(171,139,250,0.33),transparent)
+			border-radius 5px
+			z-index 11
+		img
+			width 100%
+			height 100%
+		.team-item-overlay
+			position absolute
+			left 0
+			right 0
+			bottom 0
+			width 100%
+			height 50px
+			background rgba(37, 25, 68,0.60)
+			overflow hidden
+			transition all 0.5s ease
+			transition-delay 0.15s
+			color #efefef
+			z-index 12
+			border-bottom-left-radius 4px
+			border-bottom-right-radius 4px
+			.team-item-overlay-content
+				position relative
+				box-sizing border-box
+				padding 0 15px
+				z-index 13
+				h3
+					margin 0
+					padding 15px 0
+					vertical-align top
+					font-family 'Roboto', 'Helvetica','Arial',sans-serif
+					font-size 1.750rem
+					font-weight 300
+				p
+					font-family 'Roboto', 'Helvetica','Arial',sans-serif
+					font-size 1.750
+					font-weight 300
+				i
+					position absolute
+					top 15px
+					right 5px
+					display block
+					padding 0.50rem 0.750rem
+					font-size 1.50rem
+					color $3
+					text-shadow 1px 1px 1px rgba(0,0,0,0.6)
+					transition all 0.3s ease
+					transition-delay 0.15s
+			&:hover
+				height 60%
+				background rgba(37, 25, 68,0.80)
+				i
+					color $3
+					transform rotate(180deg)
+
+@media (min-width: 769px)
+	.team
+		width 90%
+		max-width 1440px
+	.team-section-content
+		.owl-theme .owl-controls .owl-buttons .owl-prev
+			left -3.5em
+		.owl-theme .owl-controls .owl-buttons .owl-next
+			right -3.5em
+
+/* **************************
+ * BRANDS SECTION
+ */
+
+.main-brands
+	background #f3f3f3
+.main-brands-content
+	padding 2em 0
+	text-align center
+	#brands-slider
+		padding 2em 0
+		.item
+			img
+				width 80%
+				max-width 200px
+				margin 0 auto
+
+@media (min-width: 769px)
+	#brands-slider
+			.item
+				img
+					width 60%
+
+/* **************************
+ * CONTACT SECTION
+ */
+ 
+.contact-section-content
+	padding 5em 0
+	padding-bottom 2em
+	#form
+		margin 0 auto
+	#form-main-content
+		padding 2em 0
+	form
+		position relative
+		display block
+		width 100%
+		margin 0 auto
+		#form-name,
+		#form-email,
+		#form-mobile,
+		#form-msg,
+		textarea
+			display block
+			width 90%
+			margin 0 auto
+			border none
+			border-bottom 2px solid $3
+			padding 15px
+			font-family 'Roboto','Helvetica','Arial'sans-serif
+			font-size 1.50rem
+			font-weight 400
+			color #444
+			background transparent
+			transition padding 0.15s ease-in-out
+			&:hover,
+			&:focus,
+			&:active
+				outline none
+			&:focus,
+			&:active
+				border-bottom 2px solid $2
+			&:focus
+				padding 20px 15px
+				font-size 1.750rem
+		textarea
+			height 100%
+			min-height 100px
+		#form-submit
+			display block
+			margin 1em auto
+			border none
+			button()
+			&:focus
+				outline none
+				
+	#location-map
+		width 100%
+		margin 2em auto
+		.google-map
+			height 150px
+			padding 0
+			border 1px solid $violet
+			box-shadow 2px 0px 4px rgba(0,0,0,0.6)
+			iframe
+				width 100%
+				height 100%
+				z-index 1
+
+@media (min-width: 769px)
+	.contact-section-content
+		form
+			box-sizing border-box
+			width auto
+			max-width 500px
+			padding 5px 0
+			border-radius 5px
+			background #f3f3f3
+			input,
+			textarea
+				width 80%
+				max-width 500px
+				padding 20px
+				font-size 2rem
+				&:focus
+					padding 25px 20px
+					font-size 2rem
+		#location-map
+			width 80%
+			max-width 1024px
+			.google-map
+				height 200px
+			.main-description
+				font-weight 400
+
+
+/* **************************
+ * FOOTER SECTION
+ */
+footer
+	position relative
+.footer-top
+	position absolute
+	top 50%
+	transform translateY(-50%)
+	left 0
+	right 0
+	width 50px
+	height 50px
+	margin 0 auto
+	font-size 2.50rem
+	color #222
+	background rgba(235,235,235,0.9)
+	padding 0.50rem
+	border-radius 50%
+	text-align center
+	box-shadow 2px 2px 8px rgba(0,0,0,0.60)
+ 
+.footer-1,
+.footer-2,
+.footer-3,
+.footer-4
+	display block
+	width 100%
+	height 2.5rem
+	box-shadow 1px 1px 2px 1px rgba(0,0,0,0.75)
+.footer-1
+	background $1
+.footer-2
+	background $2
+.footer-3
+	background $3
+.footer-4
+	background $4

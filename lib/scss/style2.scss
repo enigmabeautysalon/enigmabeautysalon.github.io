@@ -1,0 +1,27 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #444;
+
+@mixin outline {
+  border: 1px solid black;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $primary-color;
+}
+h2 {
+	color: lighten( $primary-color, 5% );
+	@include outline;
+}
+h3 {
+	color: lighten( $primary-color, 10% );
+}
+h4,
+h5,
+h6 {
+	color: lighten( $primary-color, 15% );
+}

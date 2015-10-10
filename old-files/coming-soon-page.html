@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Enigma Beauty Salon &amp; Spa | Dubai</title>
+        <meta name="description" content="Your ultimate salon destination. The most glamorous salon in Dubai. Offering a complete range of services for the purpose of improving health, beauty and relaxation through personal care treatments.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <!-- GOOGLE VERTIFICATION -->
+        <meta name="google-site-verification" content="v3sAt-EVUq_gaO067KhukkDXBq2QLyQ0Tn0BerW4sSs" />
+
+        <!-- FONTS -->
+        <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    
+        <!-- STYLE SHEETS -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: url('img/background3.jpg') no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                font-size: 100%;
+            }
+            .under-construction {
+                display: table;
+                width:  100%;
+                height: 100%;
+                min-height: 100vh;
+                box-sizing: border-box;
+                padding: 2em 0;
+                text-align:  center;
+            }
+            .under-construction-container {
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            h1,h2,h3,p {
+                font-family: 'Playfair Display','Helvetica','Arial';
+                font-weight: 400;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            p {
+                font-family: 'Helvetica','Arial';
+                font-size: 1.150rem;
+                font-weight: normal;
+            }
+            h1 {
+                font-family: 'Great Vibes','Helvetica','Arial';
+                font-size:  3rem;
+                line-height: 1.2;
+                color: #442d7c;
+            }
+            .under-construction-logo img {
+                width: 200px;
+                height: auto;
+
+                filter: url(#drop-shadow);
+                -webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+                filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.3));
+
+                -webkit-transition: all 0.15s ease-in-out;
+                -moz-transition: all 0.15s ease-in-out;
+                -o-transition: all 0.15s ease-in-out;
+                transition: all 0.15s ease-in-out;
+                transition-delay: 0.1s;
+            }
+            .under-construction-logo img:hover {
+                transform: rotate(20deg);
+                
+                filter: url(#drop-shadow);
+                -webkit-filter: none;
+                filter: none;
+            }
+
+            @media (min-width: 600px) {
+                .under-construction-logo img {
+                    width: 250px;
+                }
+                h1 {
+                    font-size:  4rem;
+                    line-height: 1.6;
+                }
+            }
+        </style>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="under-construction">
+            <div class"under-construction-container">
+                <div class="under-construction-logo">
+                    <img src="img/logo.png" />
+                </div>
+                
+                <h1>We're setting up things for you</h1>
+                <p>Come back soon!</p>
+                <p>For Bookings: 043280033</p>
+                <p>If you're excited, <a href="http://enigmaladiessalon.com/home"> see our work in progress.</a></p>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="dist/js/all.min.js"></script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-64484585-1','auto');ga('send','pageview');
+
+            // OWL CAROUSEL - SERVICES
+            $(document).ready(function() {
+              
+                // SERVICES TABLE CAROUSEL
+                  $("#service-tables").owlCarousel({
+                    autoPlay : 5000,
+                    stopOnHover : true,
+                    lazyLoad : true,
+                    navigation : true,
+                    navigationText : [
+                      "<i class='fa fa-chevron-left'></i>",
+                      "<i class='fa fa-chevron-right'></i>"
+                      ],
+                    beforeInit : function(elem){
+                      random(elem);
+                    }
+                  });
+
+                // BRANDS CAROUSEL
+                  $("#brands-slider").owlCarousel({
+                    autoPlay : 2500,
+                    stopOnHover : false,
+                    lazyLoad : true,
+                    navigation : false,
+                    pagination : false
+                  });
+
+            });
+
+        </script>
+    </body>
+</html>
