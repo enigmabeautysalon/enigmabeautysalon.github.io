@@ -9,25 +9,23 @@ A website for Enigma Ladies Salon, based in Dubai, U.A.E.
 * JQuery
 * Owl Carousel Slider
 * Font Awesome
+* Chocolat.js
 * Gulp
   * Lint
   * SASS (SCSS)
   * Stylus CSS
   * Concat
   * Livereload
+  * Browser-sync
 * Mailthis.to (Contact Form)
 
 ## Fonts
 
-#### Cookie
-The cursive font used for Headers / Sub headers
+##### Great Vibes
+The cursive font used for Headers
 
-#### Homenaje
-Navigation / Menu font
-
-#### Hind Siliguri
+##### Roboto
 Paragraph / Captions / Etc
-
 
 ## Responsiveness
 
