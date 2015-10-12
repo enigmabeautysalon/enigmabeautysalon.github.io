@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 // SERVICES TABLE CAROUSEL
   $(".services").owlCarousel({
-    items: 3,
+    items: 4,
     autoPlay : false,
     stopOnHover : true,
     lazyLoad : true,
@@ -64,11 +64,18 @@ $(document).ready(function() {
 
   // BRANDS CAROUSEL
     $("#brands-slider").owlCarousel({
-      autoPlay : 2000,
+      autoPlay : false,
       stopOnHover : false,
       lazyLoad : true,
-      navigation : false,
-      pagination : false
+      navigation : true,
+      pagination : false,
+      navigationText : [
+      "<i class='fa fa-chevron-left'></i>",
+      "<i class='fa fa-chevron-right'></i>"
+      ],
+    beforeInit : function(elem){
+      random(elem);
+    }
     });
 
     $(".team").owlCarousel({
@@ -81,7 +88,10 @@ $(document).ready(function() {
       navigationText : [
         "<i class='fa fa-chevron-left'></i>",
         "<i class='fa fa-chevron-right'></i>"
-        ]
+        ],
+    beforeInit : function(elem){
+      random(elem);
+    }
     });
 
     // About Gallery Images

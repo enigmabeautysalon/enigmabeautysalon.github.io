@@ -93,10 +93,10 @@ nav-hover()
 		left 0
 		right 0
 		transform translateY(100%)
-		width 90%
+		width 60%
 		margin 0 auto
 		height 2px
-		background $3
+		background #2c3440
 		border-radius 25%
 		visibility hidden
 		opacity 0
@@ -139,14 +139,22 @@ body
 
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
 
-
+.anchor-arrow
+	color $2
+	text-shadow 1px 1px 2px rgba(0,0,0,0.6)
+	&:hover,
+	&:active,
+	&:focus
+		color lighten($2, 10%)
+	
+	
 .main-topic
 	position relative
 	display block
 	font-family 'Great Vibes','Helvetica','Arial', sans-serif
 	font-size 5rem
 	text-align center
-	color #303030
+	color #2c3440
 	text-shadow 1px 1px 2px rgba(0,0,0,0.33)
 	&::after
 		position absolute
@@ -165,6 +173,8 @@ body
 	padding 15px
 	max-width 700px
 	margin 0 auto
+	line-height 1.68
+	font-weight 300
 	color #707070
 
 @media (min-width: 769px)
@@ -172,7 +182,6 @@ body
 		font-size 7rem
 	.main-description
 		font-size 2rem
-		font-weight 300
 
 // OWL Carousel Style
 .owl-theme
@@ -333,14 +342,14 @@ header
 			max-width 768px
 			margin 0 auto
 			margin-top 2rem
-			z-index 2000
+			z-index 10
 			#main-menu
 				margin 0 auto
 				padding 15px
 				text-align center
 				vertical-align middle
 				transition all 0.3s ease
-				z-index 2100
+				z-index 11
 				border-top 2px solid #707070
 				border-bottom 2px solid #707070
 				/*
@@ -362,7 +371,7 @@ header
 					
 				li
 					display inline-block
-					z-index 2200
+					z-index 12
 					a
 						font-family 'Roboto', 'Helvetica', 'Arial', sans-serif
 						font-weight 400
@@ -370,7 +379,7 @@ header
 						text-transform uppercase
 						padding 1rem
 						color #505050
-						z-index 2500
+						z-index 13
 						nav-hover()
 		.main-menu
 			position relative
@@ -383,7 +392,6 @@ header
 			right 0
 			top 0
 			background url('../img/background3.jpg')
-			background-position top
 			transition all 0.3s ease
 			opacity 0.95
 
@@ -396,8 +404,8 @@ header
 	display block
 	width 100%
 	height 100vh
-	background url('../img/background3.jpg')
-	background-size cover
+	background url('../img/1.jpg')
+	background-size auto 150%
 	background-position center
 	.main-section-content
 		position relative
@@ -410,6 +418,7 @@ header
 			font-size 6.50rem
 			text-align center
 			text-shadow 1px 1px 4px rgba(0,0,0,0.33)
+			color #2c3440
 		h3#sub-title
 			font-family 'Roboto', 'Helvetica''Asrial',sans-serif
 			font-size 2rem
@@ -420,7 +429,7 @@ header
 		content ''
 		width 50px
 		height 50px
-		bottom 1rem
+		bottom 0
 		left 0
 		right 0
 		margin 0 auto
@@ -435,6 +444,8 @@ header
 		.main-section-content
 			h1#main-title
 				font-size 8rem
+		a
+			bottom 1.50rem
 		
 /* **************************
  * ABOUT SECTION
@@ -449,6 +460,7 @@ header
 		p
 			position relative
 			padding 2em 0
+			/*
 			&::after
 				position absolute
 				content ''
@@ -460,6 +472,7 @@ header
 				margin 0 auto
 				background $2
 				border-radius 50%
+			*/
 		.about-gallery
 			padding 2em 0
 			ul
@@ -536,33 +549,27 @@ header
 			#nails
 				thead
 					background $cyan
-				tbody
-					background rgba(161,249,222,0.50)
+
 			#hair
 				thead
 					background $blue
-				tbody
-					background rgba(161,188,249,0.50)
+
 			#spa
 				thead
 					background $orange
-				tbody
-					background rgba(249,178,161,0.50)
+
 			#waxing
 				thead
 					background $pink
-				tbody
-					background rgba(222,161,249,0.50)
+
 			#skin-care
 				thead
 					background $yellow
-				tbody
-					background rgba(188,249,161,0.50)
+
 			#make-up
 				thead
 					background $green
-				tbody
-					background rgba(161,249,178,0.50)
+
 		.button
 			button()
 
@@ -748,23 +755,42 @@ team-background()
  */
 
 .main-brands
-	background #f3f3f3
+	background #f2f2f2
 .main-brands-content
 	padding 2em 0
 	text-align center
 	#brands-slider
+		width 100%
 		padding 2em 0
+		margin 0 auto
 		.item
 			img
 				width 80%
 				max-width 200px
 				margin 0 auto
+	.owl-theme .owl-controls .owl-buttons .owl-prev
+		left 10px
+	.owl-theme .owl-controls .owl-buttons .owl-next
+		right 10px
+	.owl-controls
+		.owl-buttons div
+			top 35%
 
 @media (min-width: 769px)
-	#brands-slider
+	.main-brands-content
+		#brands-slider
+			width 90%
+			max-width 1440px
 			.item
 				img
 					width 60%
+		.owl-theme .owl-controls .owl-buttons .owl-prev
+			left -3.5em
+		.owl-theme .owl-controls .owl-buttons .owl-next
+			right -3.5em
+		.owl-controls
+			.owl-buttons div
+				top 25%
 
 /* **************************
  * CONTACT SECTION
@@ -824,10 +850,15 @@ team-background()
 		width 100%
 		margin 2em auto
 		.google-map
-			height 150px
+			width 100%
+			height auto
 			padding 0
+			margin 0 auto
 			border 1px solid $violet
 			box-shadow 2px 0px 4px rgba(0,0,0,0.6)
+			img
+				width 100%
+				height auto
 			iframe
 				width 100%
 				height 100%
@@ -839,14 +870,14 @@ team-background()
 			box-sizing border-box
 			width auto
 			max-width 500px
-			padding 5px 0
+			padding 30px 0
 			border-radius 5px
-			background #f3f3f3
+			background #e3ddf3
 			input,
 			textarea
 				width 80%
 				max-width 500px
-				padding 20px
+				padding 5px
 				font-size 2rem
 				&:focus
 					padding 25px 20px
@@ -854,8 +885,6 @@ team-background()
 		#location-map
 			width 80%
 			max-width 1024px
-			.google-map
-				height 200px
 			.main-description
 				font-weight 400
 
@@ -865,6 +894,54 @@ team-background()
  */
 footer
 	position relative
+	height 100%
+	background #2c3440
+	.footer-content
+		position relative
+		display block
+		width 100%
+		height 100%
+		padding 15px
+		.footer-left,
+		.footer-right
+			box-sizing border-box
+			width 100%
+			display block
+			margin-bottom 2rem
+		.footer-left
+			ul
+				margin 2em auto
+				padding 0
+				text-align center
+				li
+					box-sizing border-box
+					width 18%
+					display inline-block
+					a
+						i
+							font-size 2.50rem
+							transition color 0.3s ease
+							&:hover
+								color darken(#fafefe, 50%)
+					&:nth-child(1) a i
+						color #3b5998
+					&:nth-child(2) a i
+						color #3f729b
+					&:nth-child(3) a i
+						color #55acee
+					&:nth-child(4) a i
+						color #cd201f
+					&:nth-child(5) a i
+						color #dc4e41
+		.footer-right
+			p
+				display block
+				font-family 'Roboto','Helvetica','Arial',sans-serif
+				font-size 1.50rem
+				font-weight 300
+				text-align center
+				color #fafefe
+
 .footer-top
 	position absolute
 	top 50%
@@ -875,26 +952,39 @@ footer
 	height 50px
 	margin 0 auto
 	font-size 2.50rem
-	color #222
 	background rgba(235,235,235,0.9)
 	padding 0.50rem
 	border-radius 50%
 	text-align center
 	box-shadow 2px 2px 8px rgba(0,0,0,0.60)
- 
-.footer-1,
-.footer-2,
-.footer-3,
-.footer-4
-	display block
-	width 100%
-	height 2.5rem
-	box-shadow 1px 1px 2px 1px rgba(0,0,0,0.75)
-.footer-1
-	background $1
-.footer-2
-	background $2
-.footer-3
-	background $3
-.footer-4
-	background $4
+
+@media (min-width: 769px)
+	footer
+		.footer-content
+			height 100%
+			margin 0 auto
+			.footer-left,
+			.footer-right
+				width 49%
+				display inline-block
+				height 100%
+				vertical-align middle
+				margin-bottom 0
+			.footer-left
+				ul
+					margin 0
+					li
+						width auto
+						a
+							padding 0 15px
+			.footer-right
+				p
+					display inline-block
+					padding 10px
+					font-size 1.250rem
+					margin-bottom 0
+
+			
+			
+		
+	
