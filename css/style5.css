@@ -570,8 +570,7 @@ header .header-menu {
   color: #efefef;
   text-transform: uppercase;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 400;
   font-size: 1.5rem;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
@@ -970,8 +969,7 @@ header .header-menu {
   color: #efefef;
   text-transform: uppercase;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 400;
   font-size: 1.5rem;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
@@ -1067,47 +1065,32 @@ footer .footer-content .footer-right {
   margin-bottom: 2rem;
 }
 footer .footer-content .footer-left ul {
-  margin: 2em auto;
-  padding: 0;
   text-align: center;
+  margin: 1em 10px;
 }
 footer .footer-content .footer-left ul li {
-  box-sizing: border-box;
-  width: 18%;
   display: inline-block;
 }
-footer .footer-content .footer-left ul li a i {
-  font-size: 2.5rem;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-footer .footer-content .footer-left ul li a i:hover {
-  color: #2ad2d2;
-}
-footer .footer-content .footer-left ul li:nth-child(1) a i {
-  color: #3b5998;
-}
-footer .footer-content .footer-left ul li:nth-child(2) a i {
-  color: #3f729b;
-}
-footer .footer-content .footer-left ul li:nth-child(3) a i {
-  color: #55acee;
-}
-footer .footer-content .footer-left ul li:nth-child(4) a i {
-  color: #cd201f;
-}
-footer .footer-content .footer-left ul li:nth-child(5) a i {
-  color: #dc4e41;
-}
-footer .footer-content .footer-right p {
-  display: block;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+footer .footer-content .footer-left ul li a {
+  padding: 10px 5px;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
+  color: #a1bcf9;
+}
+footer .footer-content .footer-left ul li a i {
+  padding-right: 5px;
+  font-size: 2rem;
+}
+footer .footer-content .footer-left p {
+  margin: 0 15px;
+  padding: 1em 0;
+  border-top: 1px solid #dafa8b;
+  color: #fefefc;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-weight: 300;
+  font-size: 1.25rem;
   text-align: center;
-  color: #fafefe;
 }
 .footer-top {
   position: absolute;
@@ -1144,19 +1127,116 @@ footer .footer-content .footer-right p {
     vertical-align: middle;
     margin-bottom: 0;
   }
-  footer .footer-content .footer-left ul {
-    margin: 0;
+  footer .footer-content .footer-left ul,
+  footer .footer-content .footer-right ul {
+    text-align: left;
+    margin: 2em 15px;
   }
-  footer .footer-content .footer-left ul li {
-    width: auto;
+  footer .footer-content .footer-left ul li a,
+  footer .footer-content .footer-right ul li a {
+    padding: 0 10px;
+    font-weight: 400;
   }
-  footer .footer-content .footer-left ul li a {
-    padding: 0 15px;
-  }
+  footer .footer-content .footer-left p,
   footer .footer-content .footer-right p {
-    display: inline-block;
-    padding: 10px;
-    font-size: 1.25rem;
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0 15px;
+    text-align: left;
   }
+}
+/**********************************************
+* Services Page
+*
+*/
+.services-page {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 300;
+}
+.services-page .section-content {
+  padding: 0 15px;
+  padding-top: 10em;
+}
+.services-page .section-content h1 {
+  text-align: center;
+  font-family: 'Great Vibes', 'Helvetica', serif;
+  font-size: 8rem;
+}
+.services-page .section-content .flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 2em 0;
+}
+.services-page .section-content table {
+  width: auto;
+  min-width: 250px;
+  margin: 1em 2em;
+  moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.33);
+  -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.33);
+  box-shadow: 1px 2px 2px rgba(0,0,0,0.33);
+}
+.services-page .section-content table thead {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.services-page .section-content table thead tr td {
+  padding: 7.5px;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+}
+.services-page .section-content table tbody {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background: #faf2fa;
+}
+.services-page .section-content table tbody tr td {
+  padding: 5px 7.5px;
+}
+.services-page .section-content table tbody #services-sub-header {
+  font-size: 1.75rem;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+.services-page .section-content #nails thead {
+  background: linear-gradient(150deg, rgba(161,249,222,0.8) 60%, rgba(161,188,249,0.6));
+}
+.services-page .section-content #hair thead {
+  background: linear-gradient(150deg, rgba(161,188,249,0.8) 70%, rgba(249,178,161,0.6));
+}
+.services-page .section-content #spa thead {
+  background: linear-gradient(150deg, rgba(249,178,161,0.8) 60%, rgba(222,161,249,0.6));
+}
+.services-page .section-content #waxing thead {
+  background: linear-gradient(150deg, rgba(222,161,249,0.8) 60%, rgba(249,178,161,0.6));
+}
+.services-page .section-content #skin-care thead {
+  background: linear-gradient(150deg, rgba(188,249,161,0.8) 60%, rgba(171,139,250,0.6));
+}
+.services-page .section-content #make-up thead {
+  background: linear-gradient(150deg, rgba(171,139,250,0.8) 60%, rgba(188,249,161,0.6));
 }
