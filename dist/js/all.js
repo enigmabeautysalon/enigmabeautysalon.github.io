@@ -938,4 +938,12 @@ $(document).ready(function() {
                 addLoadEvent(scrollnfix());
   });
             
-            
+// Body Noise Background
+
+$('body').noisy({
+  'intensity' : 0.05, 
+  'size' : '200', 
+  'opacity' : 0.08, 
+  'fallback' : '', 
+  'monochrome' : true
+}).css('background-color', '#ffffff');

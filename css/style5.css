@@ -1165,7 +1165,7 @@ footer .footer-content .footer-left ul#footer-menu li:nth-last-child(1) a::after
 footer .footer-content .footer-left p {
   margin: 0 15px;
   padding: 1em 0;
-  border-top: 1px solid #dafa8b;
+  border-top: 1px solid #fa8bda;
   color: #505050;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-weight: 300;
@@ -1351,6 +1351,6 @@ footer .footer-content .footer-left p {
 }
 @media (min-width: 769px) {
   .services-page .service-header .service-header-content h2 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
