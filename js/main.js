@@ -143,7 +143,7 @@ $(document).ready(function() {
             
 // Body Noise Background
 
-$('body').noisy({
+$('#body-noise').noisy({
   'intensity' : 0.05, 
   'size' : '200', 
   'opacity' : 0.08, 
