@@ -338,9 +338,6 @@ header .toggle-menu{
     right: auto;
     left: 55%;
 }
-#service-img {
-    width: 750px;
-}
 .feature > div > div{
     width: 50%;
     float: right;
@@ -741,4 +738,7 @@ footer .social a:hover{
 .white-text input,
 .white-text textarea {
     color: #fff;
+}
+#service-img {
+    width: 750px;
 }
