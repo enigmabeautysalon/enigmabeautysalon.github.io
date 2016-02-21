@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    - Bill Castillo -- Designer / Developer
+      https://github.com/billcastillo
+      https://billcastillo.me
+
+# THANKS
+
+    Enigma / Enigma Salon
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Node, gulp
