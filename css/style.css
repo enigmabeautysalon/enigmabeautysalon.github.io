@@ -196,7 +196,7 @@ header .toggle-menu{
 }
 
 .splash{
-    background: url('../images/image-2.png') no-repeat;
+    background: url('../images/hero-image.png') no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -337,6 +337,9 @@ header .toggle-menu{
 .feature:nth-of-type(even) .feature-img{
     right: auto;
     left: 55%;
+}
+#service-img {
+    width: 750px;
 }
 .feature > div > div{
     width: 50%;
