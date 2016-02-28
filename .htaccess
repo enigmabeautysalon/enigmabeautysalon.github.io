@@ -593,6 +593,10 @@ AddDefaultCharset utf-8
      Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
  </IfModule>
 
+ RewriteEngine On 
+ RewriteCond %{SERVER_PORT} 80 
+ RewriteRule ^(.*)$ https://enigmaladiessalon.com/$1 [R=301,L]
+
 # ----------------------------------------------------------------------
 # | Reducing MIME type security risks                                  |
 # ----------------------------------------------------------------------

@@ -4,37 +4,29 @@ A website for Enigma Ladies Salon, based in Dubai, U.A.E.
 
 ## Resources / Plugins Used
 
-* HTML5 Boilerplate Template
-* Bootstrap Grid System
+* Maglev Template
 * JQuery
 * Owl Carousel Slider
 * Font Awesome
-* Chocolat.js
-* Gulp
-  * Lint
-  * SASS (SCSS)
-  * Stylus CSS
-  * Concat
-  * Livereload
-  * Browser-sync
+* zoom.js
 * Mailthis.to (Contact Form)
 
 ## Fonts
 
-##### Great Vibes
-The cursive font used for Headers
-
+##### Merriweather
 ##### Roboto
-Paragraph / Captions / Etc
-
-## Responsiveness
-
-**There's only two layouts for this website.**
-
-For devices with the width size of 768px and below (Tablets and Phones).
-And devices equal or greater than 769px (Desktop).
-
 
 ##### Web Hosting provided by Github Pages
 ##### Domain Registered at Namecheap.com
 ##### Optimizations and configuration services by Cloudflare.com
+
+## To-do
+
+* Port to Jekyll
+* Add news/blog/articel posts
+* Make a Gallery page
+* Improve about > team page
+* Make a comprehensive Services page (with descriptions)
+* Improve structure of CSS
+* Convert to mobile first CSS format (optional) 
+* Improve footer (add complete info)
