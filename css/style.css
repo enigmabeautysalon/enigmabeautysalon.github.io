@@ -25,11 +25,13 @@
 
 body, input, textarea{
     padding: 0; margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     line-height: 30px;
     color: #333;
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 input:focus, textarea:focus{
     outline: 0;
@@ -44,7 +46,7 @@ h1, h2, h3, p{
 h1{
     font-size: 40px;
     line-height: 46px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h2{
@@ -55,16 +57,51 @@ h2{
 
 h3{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-a{
-    color: #ab47bc;
+a {
+    color: #88BEF5;
     text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline;
+
+a.a-link {
+    position: relative;
+    padding: 5px;
+    color: #88BEF5;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+a.a-link::after{
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 14%;
+    background: #88BEF5;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+
+a.a-link:hover {
+    color: #fff;
+    text-decoration: none;
+    z-index: 10;
+}
+
+a.a-link:hover::after{
+    height: 90%;
 }
 
 img{
@@ -125,10 +162,12 @@ img{
 }
 .container .container-feature-p {
     position: relative;
-    font-size: 24px;
+    font-family: 'Merriweather','Times New Roman',serif;
+    font-size: 18px;
     line-height: 36px;
     margin-bottom: 60px;
     text-align: center;
+    color: #555;
 }
 .container .container-feature-p::after {
     position: absolute;
@@ -203,7 +242,7 @@ header{
 }
 header .logo{
     float: left;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     padding: 13px 0;
     color: #fff;
     font-weight: 400;
@@ -274,6 +313,15 @@ header .toggle-menu{
     animation: spin2 50s infinite linear;
 }
 
+.splash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.10);
+    width: 100%;
+    height: 100%;
+}
+
 .splash .container{
     position: relative;
     top: 48%;
@@ -282,8 +330,15 @@ header .toggle-menu{
 }
 
 .splash h1 {
+    font-family: 'PT Sans','Helvetica','Arial';
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
     color: #4b007d;
-    text-shadow: 2px 1px 4px rgba(0,0,0,0.35);
+    background-image: -webkit-linear-gradient(92deg,#4b007d,#ff4081);
+    background-image: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .splash h2{
@@ -291,13 +346,13 @@ header .toggle-menu{
     margin-bottom: 40px;
 }
 
-/*
-@media (min-width: 600px) {
-    .splash h1 {
 
+@media (min-width: 600px) {
+    .splash-overlay {
+        background: none;
     }
 }
-*/
+
 
 /* SERVICES
 *************************************************************/
