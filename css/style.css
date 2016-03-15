@@ -45,7 +45,7 @@ h1, h2, h3, p{
 
 h1{
     font-size: 40px;
-    line-height: 46px;
+    line-height: 1;
     font-weight: 700;
 }
 
@@ -58,6 +58,16 @@ h2{
 h3{
     font-size: 20px;
     font-weight: 700;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 54px;
+    }
+
+    h1.main-h1 {
+        font-size: 84px;
+    }
 }
 
 a {
@@ -187,14 +197,29 @@ img{
     display: block;
     clear: both;
 }
+
 section{
     padding: 100px 20px;
 }
 
+section.map {
+    position: relative;
+    padding: 0;
+    line-height: 0;
+}
+
+section.map h2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
 .btn{
     display: inline-block;
-    padding: 15px 30px;
-    border-radius: 50px;
+    padding: 10px 20px;
+    border-radius: 25px;
     color: #fff;
     border: 1px solid #fff;
     background: transparent;
@@ -204,21 +229,27 @@ section{
     -o-transition: all 0.35s ease;
     transition: all 0.35s ease;
 }
+
 .btn:hover{
     text-decoration: none;
     background: rgba(255,255,255,0.1);
 }
+
 .btn.yellow{
     color: #ffcd40;
     border: 1px solid #ffcd40;
 }
+
 .btn.purple {
     color: #4b007d;
-    border: 1px solid #4b007d;
+    border: 1px solid #fff779;
+    background: rgba(255,247,121,0.90);
 }
+
 .btn.smaller{
     padding: 10px 25px;
 }
+
 .btn .fa {
     margin-left: 10px;
 }
@@ -324,6 +355,7 @@ header .toggle-menu{
 
 .splash .container{
     position: relative;
+    text-align: center;
     top: 48%;
     transform: translateY(-50%);
     z-index: 5;
@@ -333,6 +365,7 @@ header .toggle-menu{
     font-family: 'PT Sans','Helvetica','Arial';
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 5px;
     color: #4b007d;
     background-image: -webkit-linear-gradient(92deg,#4b007d,#ff4081);
@@ -343,7 +376,9 @@ header .toggle-menu{
 
 .splash h2{
     color: #ff4081;
+    font-variant: small-caps;
     margin-bottom: 40px;
+    text-shadow: 1px 0px 2px rgba(0,0,0,0.15);
 }
 
 
