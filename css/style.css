@@ -362,6 +362,7 @@ header .toggle-menu{
 }
 
 .splash h1 {
+    position: relative;
     font-family: 'PT Sans','Helvetica','Arial';
     font-weight: 400;
     text-transform: uppercase;
@@ -372,15 +373,23 @@ header .toggle-menu{
     background-image: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    z-index: 10;
+
+    padding: 0.250em;
+    border: 1px solid #555;
 }
 
 .splash h2{
     color: #ff4081;
     font-variant: small-caps;
     margin-bottom: 40px;
-    text-shadow: 1px 0px 2px rgba(0,0,0,0.15);
+    text-shadow: 2px 1px 4px rgba(255,255,255,0.10);
 }
 
+.splash img {
+    max-width: 100px;
+    height: auto;
+}
 
 @media (min-width: 600px) {
     .splash-overlay {
