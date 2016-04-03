@@ -7,8 +7,23 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://enigmaladiessalon.com/</loc>
-  <lastmod>2016-03-15T13:43:05+00:00</lastmod>
+  <loc>https://enigmaladiessalon.com/</loc>
+  <lastmod>2016-04-02T13:49:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://enigmaladiessalon.com/about</loc>
+  <lastmod>2016-04-02T13:49:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://enigmaladiessalon.com/services</loc>
+  <lastmod>2016-04-02T13:49:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://enigmaladiessalon.com/prices</loc>
+  <lastmod>2016-04-02T13:49:09+00:00</lastmod>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>

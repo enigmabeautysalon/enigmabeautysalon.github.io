@@ -422,7 +422,7 @@ header .toggle-menu{
 *************************************************************/
 
 .splash-50vh {
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .service-section {
@@ -993,6 +993,9 @@ header .toggle-menu{
   text-shadow: 1px 0 4px rgba(0,0,0,0.35);
 }
 
+#features time {
+  display: block;
+}
 
 /*******************************************************************
  * FOOTER
