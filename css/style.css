@@ -87,10 +87,10 @@ a.a-link {
     color: #88BEF5;
     white-space: nowrap;
     text-decoration: none;
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -webkit-transition: all 0.30s ease;
+    -moz-transition: all 0.30s ease;
+    -o-transition: all 0.30s ease;
+    transition: all 0.30s ease;
 }
 
 a.a-link::after{
@@ -102,10 +102,10 @@ a.a-link::after{
     width: 100%;
     height: 2px;
     background: #88BEF5;
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -webkit-transition: all 0.30s ease;
+    -moz-transition: all 0.30s ease;
+    -o-transition: all 0.30s ease;
+    transition: all 0.30s ease;
     z-index: -1;
 }
 
@@ -223,6 +223,7 @@ section.map h2 {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     padding: 0.50em 1em;
     color: #f6f6f6;
@@ -234,22 +235,45 @@ section.map h2 {
     letter-spacing: 1px;
 
     background: rgba(75,0,125,0.60);
-    background: linear-gradient( 135deg, rgba(255,64,129,0.50), rgba(75,0,125,0.50));
-    background: -webkit-linear-gradient( 135deg, rgba(255,64,129,0.50), rgba(75,0,125,0.50));  
-    background: -moz-linear-gradient( 135deg, rgba(255,64,129,0.50), rgba(75,0,125,0.50));  
-    background: -o-linear-gradient( 135deg, rgba(255,64,129,0.50), rgba(75,0,125,0.50));
+    background: linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));
+    background: -webkit-linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));  
+    background: -moz-linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));  
+    background: -o-linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));
 
-    -webkit-transition: all 0.35s linear;
-    -moz-transition: all 0.35s linear;
-    -o-transition: all 0.35s linear;
-    transition: all 0.35s linear;
+    -webkit-transition: all 0.30s linear;
+    -moz-transition: all 0.30s linear;
+    -o-transition: all 0.30s linear;
+    transition: all 0.30s linear;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  top: -20%;
+  left: -5%;
+  width: 110%;
+  height: 140%;
+  border: 1px solid #999;
+
+  -webkit-transition: all 0.30s linear;
+  -moz-transition: all 0.30s linear;
+  -o-transition: all 0.30s linear;
+  transition: all 0.30s linear;
 }
 
 .btn:hover {
-  background: linear-gradient( 135deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));
-  background: -webkit-linear-gradient( 135deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));  
-  background: -moz-linear-gradient( 135deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));  
-  background: -o-linear-gradient( 135deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));
+  background: linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));
+  background: -webkit-linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));  
+  background: -moz-linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));  
+  background: -o-linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));
+}
+
+.btn:hover.btn::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
 }
 
 .btn.smaller {
@@ -422,7 +446,7 @@ header .toggle-menu{
 *************************************************************/
 
 .splash-50vh {
-    min-height: 50vh;
+    min-height: 50%;
 }
 
 .service-section {
@@ -602,10 +626,10 @@ header .toggle-menu{
     background: transparent;
     background: rgba(75, 0, 125,0.60);
 
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -webkit-transition: all 0.30s ease;
+    -moz-transition: all 0.30s ease;
+    -o-transition: all 0.30s ease;
+    transition: all 0.30s ease;
 }
 
 .service-container .service-cb .service-cb-btn:hover {
@@ -670,7 +694,6 @@ header .toggle-menu{
 }
 
 
-/*
 .feature.services .icon {
     max-width: 50px;
     height: auto;
@@ -684,7 +707,7 @@ header .toggle-menu{
     left: 55%;
     z-index: -1;
 }
-.feature.    {
+.feature.services    {
     border-bottom: 4px solid #ff4081;
 }
 .feature.services > div > div {
@@ -717,7 +740,9 @@ header .toggle-menu{
 .feature.services table tr td:nth-child(1) {
     width: 80%;
 }
-*/
+
+
+
 .overview{
     text-align: center;
 }
@@ -1379,10 +1404,10 @@ footer .social a:hover{
     border-radius: 5px;
     overflow: hidden;
     background: rgba(75,0,125,0.60);
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -webkit-transition: all 0.30s ease;
+    -moz-transition: all 0.30s ease;
+    -o-transition: all 0.30s ease;
+    transition: all 0.30s ease;
 }
 
 .team-container:hover .team-description {
