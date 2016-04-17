@@ -234,11 +234,12 @@ section.map h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
 
-    background: rgba(75,0,125,0.60);
-    background: linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));
-    background: -webkit-linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));  
-    background: -moz-linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));  
-    background: -o-linear-gradient( 135deg, rgba(255,64,129,0.65), rgba(75,0,125,0.65));
+    background: rgba(75,0,125,0.1);
+    background: linear-gradient( 135deg, rgba(255,64,129,1), rgba(75,0,125,1));
+    background: -webkit-linear-gradient( 135deg, rgba(255,64,129,1), rgba(75,0,125,1));  
+    background: -moz-linear-gradient( 135deg, rgba(255,64,129,1), rgba(75,0,125,1));  
+    background: -o-linear-gradient( 135deg, rgba(255,64,129,1), rgba(75,0,125,1));
+    opacity: 0.60;
 
     -webkit-transition: all 0.30s linear;
     -moz-transition: all 0.30s linear;
@@ -262,10 +263,13 @@ section.map h2 {
 }
 
 .btn:hover {
-  background: linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));
-  background: -webkit-linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));  
-  background: -moz-linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));  
-  background: -o-linear-gradient( 45deg, rgba(255,64,129,0.75), rgba(75,0,125,0.75));
+  opacity: 0.85;
+  /*
+  background: linear-gradient( 45deg, rgba(255,64,129,1), rgba(75,0,125,1));
+  background: -webkit-linear-gradient( 45deg, rgba(255,64,129,1), rgba(75,0,125,1));  
+  background: -moz-linear-gradient( 45deg, rgba(255,64,129,1), rgba(75,0,125,1));  
+  background: -o-linear-gradient( 45deg, rgba(255,64,129,1), rgba(75,0,125,1));
+  */
 }
 
 .btn:hover.btn::before {
@@ -428,11 +432,15 @@ header .toggle-menu{
 }
 
 .subpage-splash {
-    height: 50vh;
+    height: 100%;
 }
 
 .subpage-splash .container {
     height: 100%;
+}
+
+.subpage-splash h1 {
+  padding: 0.50em;
 }
 
 @media (min-width: 600px) {
