@@ -1,3 +1,5 @@
+
+
 // Parallax
 
 $.fn.parallax = function(strength) {
@@ -38,6 +40,13 @@ $(document).ready(function(){
     if($(window).width() < 800){
         $('.packages > div > div:nth-of-type(3)').insertAfter($('.packages > div > div:nth-of-type(1)'));
     }
+
+    /* Header Menu */
+
+    $(".dropdown > a").click(function(event){
+        event.preventDefault();
+        $(".dropdown a ul").css( "display", "block" );
+    });
 
 });
 

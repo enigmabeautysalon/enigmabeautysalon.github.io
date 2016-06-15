@@ -1,0 +1,27 @@
+{
+  "name": "enigmabeautysalon.github.io",
+  "version": "1.0.0",
+  "description": "enigma salon website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enigmabeautysalon/enigmabeautysalon.github.io.git"
+  },
+  "keywords": [
+    "enigma",
+    "salon",
+    "dubai"
+  ],
+  "author": "bill castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enigmabeautysalon/enigmabeautysalon.github.io/issues"
+  },
+  "homepage": "https://github.com/enigmabeautysalon/enigmabeautysalon.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
