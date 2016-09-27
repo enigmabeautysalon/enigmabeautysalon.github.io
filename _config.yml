@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Enigma Ladies Salon | Dubai
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  An upscale destination in Dubai, UAE offering a complete range of services for the purpose of improving health, beauty and relaxation through personal care treatments. From Manicure & Pedicure stations to a full-fledged Nailbar.
+
+  It also has services on hair such as cutting, styling and coloring, a Makeup Section and Spa Services that offer ultra-chic, ultra-comfortable treatment rooms with the finest spa linens and equipment. The Spa offers massages in a variety of styles – traditional Swedish Massage, Deep Tissue work, Hot Stone Massage, Reflexology, Thai etc.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+permalink: /blog/:title
+twitter_username: enigmabeautyss
+facebook: "https://www.facebook.com/enigmabeautysalonandspa/"
+instagram: "https://instagram.com/enigmabeautysalonandspa/"
+twitter: "https://twitter.com/enigmabeautyss"
+googleplus: "https://plus.google.com/+Enigmaladiessalon"
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,367 @@
+service:
+  - main-category: Nails
+
+  - name: Nail Design
+    price: 10+
+    description: 
+
+  - name: Nail Polish
+    price: 20
+    description: 
+
+  - name: Nail Trimming / File
+    price: 30
+    description: 
+
+  - name: Cuticle Cleaning
+    price: 50
+    description: 
+
+  - name: Striplac
+    price: 100
+    description: 
+
+  - sub-category:
+    - category-name: Nail Extensions
+    - name: Nail Extension
+      price: 30+
+      description: 
+    - name: Nail Repair
+      price: 25+
+      description: 
+    - name: 3D Design
+      price: 600+
+      description: 
+    - name: Extension Removal
+      price: 100
+      description: 
+    - name: French Extension Long
+      price: 500
+      description: 
+    - name: French Extension Short
+      price: 450
+      description: 
+    - name: Natural Overlay Set Long
+      price: 400+
+      description: 
+    - name: Natural Overlay Set Short
+      price: 350+
+      description: 
+    - name: Refill Deep
+      price: 350
+      description: 
+    - name: Refill French
+      price: 270
+      description: 
+    - name: Refill Normal
+      price: 220
+      description: 
+    - name: Refill with Design
+      price: 300+
+      description: 
+    - name: Refill with Gel Color
+      price: 250
+      description: 
+    - name: Refill with change shape
+      price: 350
+      description:
+    - name: Stone
+      price: 20
+      description: 
+
+  - sub-category:
+    - category-name: Hands
+    - name: Manicure
+      price: 60
+      description: 
+    - name: French
+      price: 80
+      description: 
+    - name: French Polish
+      price: 20
+      description: 
+    - name: Lac
+      price: 160
+      description: 
+    - name: Lac Polish
+      price: 100
+      description: 
+    - name: Lac Polish Removal
+      price: 30
+      description:
+    - name: Lac French
+      price: 180
+      description: 
+    - name: Lac French Polish
+      price: 120
+      description: 
+    - name: Manicure Striplac
+      price: 160
+      description: 
+    - name: Alessandro Spa Manicure
+      price: 230
+      description: 
+    - name: Manicure Paraffin
+      price: 150
+      description: 
+    - name: Manicure Striplac
+      price: 160
+      description: 
+    - name: Thermasoft Paraffin Hands
+      price: 110
+      description: 
+
+  - sub-category:
+    - category-name: Feet
+    - name: Pedicure
+      price: 110
+      description: 
+    - name: Pedicure French
+      price: 120
+      description: 
+    - name: Pedicure Lac
+      price: 210
+      description: 
+    - name: Pedicure Lac French
+      price: 230
+      description: 
+    - name: Pedicure Striplac
+      price: 210
+      description: 
+    - name: Alessandro Spa Pedicure
+      price: 260
+      description:
+    - name: Thermasoft Paraffin Feet
+      price: 110
+      description: 
+    - name: Feet Scraping
+      price: 50
+      description: 
+
+  - main-category:
+    - name: Hair Cut + Blowdry
+      price: 200
+      description: 
+    - name: Blowdry
+      price: 80 - 150
+      description: 
+    - name: Hotcut
+      price: 250
+      description: 
+    - name: Ends Cut
+      price: 100
+      description: 
+    - name: Fringe Cut
+      price: 50
+      description: 
+    - name: Kids Cut
+      price: 100
+      description: 
+    - name: Belli Capelli Keratin / pc
+      price: 25
+      description: 
+    - name: Refill Hair Extension / pc
+      price: 10
+      description: 
+    - name: Extension Removal / pc
+      price: 5
+      description: 
+
+  - sub-category:
+    - category-name: Hair Coloring
+    - name: Barex Coloring
+      price: 300
+      description: 
+    - name: Loreal Coloring
+      price: 450
+      description: 
+    - name: Wella Coloring
+      price: 300
+      description: 
+    - name: Hair Tonning
+      price: 150
+      description: 
+    - name: Highlights
+      price: 350+
+      description: 
+    - name: Bleaching
+      price: 350
+      description: 
+    - name: Root Coloring
+      price: 250
+      description: 
+    - name: Root Highlights
+      price: 150
+      description: 
+    - name: Hair Color Removal
+      price: 350+
+      description: 
+
+  - sub-category:
+    - category-name: Hair Styling & Treatment
+    - name: Hairstyle
+      price: 200
+      description: 
+    - name: Bridal Hairstyle
+      price: 1000
+      description: 
+    - name: Braid
+      price: 100+
+      description: 
+    - name: Kids Braid
+      price: 80
+      description: 
+    - name: Hair Up
+      price: 250
+      description: 
+    - name: Hair Up Evening
+      price: 350
+      description: 
+    - name: Hair Mask
+      price: 100
+      description: 
+    - name: Hot Iron Curl
+      price: 200
+      description: 
+    - name: Permanent Perming
+      price: 550
+      description: 
+    - name: Sebastian Lamination
+      price: 350
+      description: 
+    - name: Barex Lamination Short
+      price: 350+
+      description: 
+    - name: Hair Mask
+      price: 100
+      description: 
+    - name: Botox
+      price: 1500
+      description: 
+    - name: Loreal Treatment
+      price: 150+
+      description: 
+    - name: Barex Treatment
+      price: 250+
+      description: 
+
+  - main-category: Spa
+
+  - name: Slimming Massage
+    price: 300
+    description: 
+  - name: Full Body Massage
+    price: 250
+    description: 
+  - name: Back Massage
+    price: 155
+    description: 
+  - name: Head & Shoulder Massage
+    price: 150
+    description: 
+  - name: Head Massage
+    price: 75
+    description: 
+  - name: Foot Massage
+    price: 100
+    description: 
+  - name: Massage / Machine
+    price: 350
+    description: 
+  - name: Anti-Cellulite 1 / 5 Sessions
+    price: 350 / 1500
+    description: 
+  - name: Moroccan Bath
+    price: 150
+    description: 
+  - name: Thai Massage
+    price: 500
+    description: 
+  - name: Slimming Massage
+    price: 300
+    description: 
+  - name: Solarium
+    price: 60
+    description: 
+  - name: Full Body
+    price: 270
+    description: 
+  - name: Bikini Line
+    price: 80
+    description: 
+  - name: Full Bikini
+    price: 85
+    description: 
+  - name: Full Arm
+    price: 80
+    description: 
+  - name: Full Face
+    price: 70
+    description: 
+  - name: Full Leg
+    price: 120
+    description: 
+  - name: Half Arm
+    price: 40
+    description: 
+  - name: Half Leg
+    price: 60
+    description: 
+  - name: Chest
+    price: 20
+    description: 
+  - name: Under Arm
+    price: 40
+    description: 
+  - name: Upper Lip
+    price: 20
+    description: 
+
+  - name: Express Make-up
+    price: 150+
+    description: 
+  - name: Make-up
+    price: 300
+    description: 
+  - name: Bridal Make-up
+    price: 1000
+    description: 
+  - name: Eye Make-up
+    price: 150
+    description: 
+  - name: Eyelash Foundation
+    price: 50
+    description: 
+  - name: Foundation Application
+    price: 100
+    description: 
+  - name: Eyebrow Shaping
+    price: 50
+    description: 
+  - name: Eyebrow Tinting
+    price: 50
+    description: 
+  - name: Eyelash Extension
+    price: 500
+    description: 
+  - name: Eyelash Extension Removal
+    price: 50
+    description: 
+  - name: Eyelash Refill
+    price: 250
+    description: 
+  - name: Eyelash Tinting
+    price: 50
+    description: 
+
+
+
+
+
+
+
+
+
+
+
+

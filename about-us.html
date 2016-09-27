@@ -1,0 +1,147 @@
+---
+layout: default
+title: About Us
+team:
+ - name: Anara
+   role: Nail Technician
+   img: anara.jpg
+ - name: Anya
+   role: Hair Dresser
+   img: anya.jpg
+ - name: Bike
+   role: Massage Therapist
+   img: bike.jpg
+ - name: Emily
+   role: Receptionist
+   img: emily.jpg
+ - name: Gozel
+   role: Receptionist
+   img:  gozel.jpg
+ - name: Hayane
+   role: Nail Technician
+   img: hayane.jpg
+ - name: Jenya
+   role: Make-up Artist
+   img: jenya.jpg
+ - name: Lyuda
+   role: Master of Hairstyle
+   img: lyuda.jpg
+ - name: Mariia
+   role: Nail Technician
+   img: mariia.jpg
+ - name: Maya
+   role: Hair Stylist
+   img: maya.jpg
+ - name: Natalia
+   role: Cosmetologist
+   img: natalia.jpg
+ - name: Sveta
+   role: Nail Master / Trainer
+   img: sveta.jpg
+ - name: Svetlana
+   role: Hair Stylist
+   img: sveta-hair.jpg
+ - name: Pahny
+   role: Receptionist
+   img: pahny.jpg
+ - name: Tanya
+   role: Hair Stylist
+   img: tanya.jpg
+ - name: Tham
+   role: Massage Therapist
+   img: tham.jpg
+ - name: Veronika
+   role: Nail Technician
+   img: veronika-nails.jpg
+ - name: Yana
+   role: Nail Technician
+   img: yana.jpg
+ - name: Yulia
+   role: Nail Technician
+   img: yulia.jpg
+ - name: Yuliya
+   role: Hair Stylist
+   img: yuliya.jpg
+---
+
+<section class="splash_about_section padding-40">
+	<div id="particles-js"></div>
+	<img class="enigma_house" src="img/compressed/enigmahouse-c.png" alt="">
+	<div class="container row middle-xs whole-vh-min">
+		<div class="col-xs-12 col-sm-offset-4 col-sm-8 col-md-offset-6 col-md-6">
+			<h1>About Us</h1>
+			<p>
+				An upscale destination in <strong>Dubai, UAE</strong> offering a complete range of services for the purpose of improving health, beauty and relaxation through personal care treatments. From <u>Manicure</u> &amp; <u>Pedicure</u> stations to a full-fledged Nailbar.
+			</p>
+			<p>
+				It also has services on hair such as cutting, styling and coloring, a Makeup Section and Spa Services that offer ultra-chic, ultra-comfortable treatment rooms with the finest spa linens and equipment. The Spa offers massages in a variety of styles – traditional Swedish Massage, Deep Tissue work, Hot Stone Massage, Reflexology, Thai etc.
+
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="features_about_section half-vh-min padding-100">
+	<div class="container row center-xs between-sm">
+		<div class="features_about_content col-xs-12 col-sm-6">
+			<div class="features_skew">
+				<div class="features_skew_img"
+				style="background:url('../img/compressed/feature-1.jpg') no-repeat;
+				background-size: cover;
+                background-position: center center;"></div>
+			</div>
+			<div class="features_text">
+				<h3>Unrivaled Expertise</h3>
+				<p>
+					A nail makeover with the most creative nail technicians in Dubai! With skills masterfully perfected over the years of professional work.
+				</p>
+			</div>
+		</div>
+		<div class="features_about_content col-xs-12 col-sm-6">
+			<div class="features_skew">
+				<div class="features_skew_img"
+				style="background:url('../img/compressed/feature-2.jpg') no-repeat;
+				background-size: cover;
+                background-position: center center;"></div>
+			</div>
+			<div class="features_text">
+				<h3>A Unique Destination</h3>
+				<p>
+					A nail makeover with the most creative nail technicians in Dubai! With skills masterfully perfected over the years of professional work.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="team_about_section whole-vh-min padding-100">
+	<div class="container">
+		<div class="team_about_section_content row">
+			<h2 class="styled col-xs-12">The Team</h2>
+			{% for team_item in page.team %}
+			<div class="team_item col-xs-6 col-sm-4 col-md-3">
+				{% if team_item.img %}
+				<img src="img/team/{{ team_item.img }}" alt="{{ team_item.name }}">
+				{% else %}
+					<img src="img/team/female.png" alt="{{ team_item.name }}">
+				{% endif %}
+				<h4 class="styled">{{ team_item.name }}</h4>
+				<p>{{ team_item.role }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="enigma_about_section padding-100">
+	<div class="container row middle-xs">
+		<div class="col-xs-12">
+			<h2>A part of Enigma Beauty Group</h2>
+			<img src="img/logo/enigmalogo-white.png" alt="">
+			<p>A leading distributor in the beauty and professional salon products industry, taking its rightful place along with other luxury and prestigious brands that are aiming to conquer the medium to premium segments of Spa’s, Beauty Salons and hotels in the UAE region.</p>
+			<a href="http://enigmabeauty.net" target="_blank" class="button-styled button">Learn More > </a>
+		</div>
+	</div>
+</section>
+
+<script src="js/particles.js"></script>

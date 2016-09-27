@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog / News
+---
+
+<div class="services_splash_section parallax-container half-vh">
+	<div class="parallax" style="background: url('img/salon/1.jpg') center center / cover no-repeat;"></div>
+	<div class="container">
+		<h1 class="styled">Blog</h1>
+	</div>
+</div>
+
+<section class="blog_section_content padding-100">
+	<div class="container">
+		{% for post in site.posts %}
+			<article class="blog_post">
+
+				<div class="blog_post_meta">
+					<a href="{{ post.url | prepend: site.baseurl }}">
+						<h2 class="blog_post_title">
+							{{ post.title }}
+						</h2>
+					</a>
+					<div class="blog_meta">
+        		<span class="blog_date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      		</div>
+				</div>
+
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<img class="blog_post_img" src="{{ post.img }}" alt="">
+				</a>
+
+				<p class="blog_post_excerpt">
+					{{ post.content | strip_html | truncatewords:35}}
+				</p>
+
+				<a class="button button-styled" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+
+			</article>
+			{% if post != last %}
+				<div class="post_divider"></div>
+			{% endif %}
+
+		{% endfor %}
+	</div>
+</section>

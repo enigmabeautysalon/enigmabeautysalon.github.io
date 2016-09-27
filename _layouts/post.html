@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="triangle"></div>
+<div class="triangle-2"></div>
+<div class="triangle-3"></div>
+
+<article class="post whole-vh-min padding-100" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="container">
+
+  <section class="post_header padding-50">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <figure class="post-image full">
+  		<img src="{{ site.baseurl }}/{{ page.img }}" alt="">
+  	</figure>
+  </section>
+
+  <div class="post_content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  </div>
+
+</article>

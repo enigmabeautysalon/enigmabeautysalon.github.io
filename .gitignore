@@ -9,3 +9,6 @@ old-files
 template.html
 newsletter/
 old/
+_site
+.sass-cache
+.jekyll-metadata

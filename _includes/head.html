@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4B007D">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- font awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- icons -->
+	<link rel=apple-touch-icon href=apple-touch-icon.png>
+ 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+ 	<link rel="shortcut icon" type="image/png" href="https://enigmaladiessalon.com/favicon.png"/>
+
+  <script type="text/javascript">
+	WebFontConfig = {
+	    google: {
+	    	families: [ 'Montserrat:400,700:latin',
+	    				'PT Sans:400,700,latin' ]}
+	  };
+	  (function() {
+	    var wf = document.createElement('script');
+	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	    wf.type = 'text/javascript';
+	    wf.async = 'true';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(wf, s);
+	  })();
+	</script>
+
+	<noscript>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|Montserrat:400,700" rel="stylesheet">
+	</noscript>
+
+	<style>
+	  /* for fallback fonts
+	  h1,h2,h3,h4,h5,h6 {
+	    font-family: 'Georgia','TimesNewRoman','Times New Roman',serif;
+	  }
+	  p {
+		font-family: 'Helvetica','Arial',sans-serif;
+	  }
+	  */
+	</style>
+	
+ <!-- stylesheets
+ 	<link href="css/frameworks.css" rel="stylesheet"/>
+ 	<link href="css/style.css" rel="stylesheet"/>
+  -->
+
+
+ <script>
+	  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	  e.src='https://www.google-analytics.com/analytics.js';
+	  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	  ga('create','UA-64484585-1','auto');ga('send','pageview');
+  </script>
+
+</head>
+<body>
+<div class="wrapper">
+
+
+
+
+
+
