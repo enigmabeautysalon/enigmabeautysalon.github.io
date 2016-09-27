@@ -599,6 +599,8 @@ nav#mobile_menu.visible {
     text-align: center;
     max-width: 500px;
     margin: 0 auto; }
+    .about_section_index .about_description .about_info {
+      margin-top: 25px; }
   .about_section_index .about_slider {
     position: relative;
     top: 4em;
@@ -901,36 +903,38 @@ nav#mobile_menu.visible {
 /*------------------------------------*\
   #SERVICES SECTION
 \*------------------------------------*/
-.services_splash_section::before {
-  position: absolute;
-  content: "";
-  display: block;
-  top: -40px;
-  right: -40px;
-  bottom: -40px;
-  left: -40px;
-  transform: rotate(30deg);
-  background: rgba(105, 105, 255, 0.08);
-  animation: spin 60s infinite linear; }
-.services_splash_section::after {
-  position: absolute;
-  content: "";
-  display: block;
-  top: -40px;
-  right: -40px;
-  bottom: -40px;
-  left: -40px;
-  transform: rotate(150deg);
-  background: rgba(105, 105, 255, 0.08);
-  animation: spin2 50s infinite linear; }
-.services_splash_section .container {
-  height: 100%; }
-  .services_splash_section .container h1 {
-    position: relative;
+.services_splash_section {
+  height: 50vh; }
+  .services_splash_section::before {
+    position: absolute;
+    content: "";
     display: block;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center; }
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    left: -40px;
+    transform: rotate(30deg);
+    background: rgba(105, 105, 255, 0.08);
+    animation: spin 60s infinite linear; }
+  .services_splash_section::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    left: -40px;
+    transform: rotate(150deg);
+    background: rgba(105, 105, 255, 0.08);
+    animation: spin2 50s infinite linear; }
+  .services_splash_section .container {
+    height: 100%; }
+    .services_splash_section .container h1 {
+      position: relative;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center; }
 
 .services_service_section .container .main_category {
   display: block; }

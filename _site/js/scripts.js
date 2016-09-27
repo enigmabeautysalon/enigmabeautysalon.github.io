@@ -47,6 +47,20 @@ $(document).ready(function() {
    	$( '.mobile_menu_button' ).click(function() {
    		$('#mobile_menu').toggleClass('visible');
    		$('#mobile_menu_button').toggleClass('fa-bars fa-times');
-   	}); 
+   	});
+
+   	/*
+   	var $splash-page = $('.splash_section_index');
+   	var $pages-half = $('.services_splash_section');
+	var h = $pages-half.innerHeight;
+	var h2 = $splash-page.innerHeight;
+	$pages-half.css('height', h);
+	$splash-page.css('height', h2);
+	*/
+
+	$('.services_splash_section').css('height', $(window).height() / 2);
+	$('.splash_section_index').css('height', $(window).height());
+
+
 
 }); // End Document Ready
