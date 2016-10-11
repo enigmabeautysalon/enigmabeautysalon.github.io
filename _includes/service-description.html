@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="service__description row between-xs">
+		{% for category in site.data.services %}
+			{% assign count = 1 %}
+			{% if category.categoryname == 'Nails' %}
+				{% for subcategories in category.subcategories %}
+					{% for serviceItem in subcategories.items %}
+						{% if serviceItem.description %}
+							<div id="{{ count }}" class="service__description__content col-xs-12 col-sm-6 col-md-4">
+								<div class="service__description__box">
+									<h3 class="service__description__header">
+										{{ serviceItem.name }}
+									</h3>
+									<p class="service__description__text">
+										{{ serviceItem.description }}
+									</p>
+								</div>
+							</div>
+							{% assign count = count | plus: 1 %}
+
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

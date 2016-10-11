@@ -7,6 +7,13 @@ $(document).ready(function() {
     
   });
 
+  // Inititate Services Page Image Carousel
+  $("#service-carousel").owlCarousel({
+  	navigation: false,
+  	pagination: true,
+  	lazyload: 	true
+  });
+
   // Parallax
   var parallaxElements = $('.parallax'),
   parallaxQuantity = parallaxElements.length;
@@ -60,6 +67,10 @@ $(document).ready(function() {
 
 	$('.services_splash_section').css('height', $(window).height() / 2);
 	$('.splash_section_index').css('height', $(window).height());
+	var sph = $('.services_page__header').height();
+	// $('.services_page__header').css('height',sph + (sph * 0.50));
+	// $('.services_page__header').css('height', $(window).height() / 3 * 2);
+
 
 
 

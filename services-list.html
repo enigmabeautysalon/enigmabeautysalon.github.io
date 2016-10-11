@@ -27,13 +27,11 @@ title: Services
 		{% endif %}
 
 		<section class="row padding-40 {{ width }}" id="{{ category.categoryname }}">
-			
-			<h3 class="styled col-xs-12">
-				<a class="services__main__header" href="{{ page.url }}/{{ category.categoryname }}">
-					{{ category.categoryname }}
-				</a>
-			</h3>
 
+			<h3 class="styled col-xs-12">
+				{{ category.categoryname }}
+			</h3>
+			
 			<!-- List subcategories -->
 
 			{% for subcategories in category.subcategories %}
