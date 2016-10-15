@@ -1,0 +1,24 @@
+{% include head.html %}
+  
+  {% include header.html %}
+
+  <div class="services_page">
+
+	  <header class="services_page__header padding-50">
+	  	<div class="container row center-xs middle-xs">
+			<div class="header__image col-xs-12 col-sm-8 col-md-8">
+				<div class="header__image__content">
+					<img src="{{ site.baseurl }}/{{ page.image }}" alt="">
+				</div>
+			</div>
+			<h2 class="header__quote col-xs-12 col-sm-8 col-md-4 padding-40">
+				{{ page.quote }}
+			</h2>
+		</div>
+	  </header>
+
+  	{{ content }}
+
+  </div>
+
+{% include footer.html %}

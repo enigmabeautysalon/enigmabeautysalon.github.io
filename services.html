@@ -16,6 +16,7 @@ title: Services
 		
 		{% for category in site.data.services %}
 		
+		<!-- Set width of each category -->
 		{% assign width = '' %}
 		{% if category.categoryname == 'Hair' or category.categoryname == 'Nails' %}
 			{% assign width = "col-xs-12" %}
@@ -26,11 +27,13 @@ title: Services
 		{% endif %}
 
 		<section class="row padding-40 {{ width }}" id="{{ category.categoryname }}">
-
-			<h3 class="styled col-xs-12">
-				{{ category.categoryname }}
-			</h3>
 			
+			<h3 class="styled col-xs-12">
+				<a class="services__main__header" href="{{ page.url }}/{{ category.categoryname | downcase }}">
+					{{ category.categoryname }}
+				</a>
+			</h3>
+
 			<!-- List subcategories -->
 
 			{% for subcategories in category.subcategories %}

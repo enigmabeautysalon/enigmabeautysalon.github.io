@@ -7,42 +7,39 @@
           description: 
         - name: Nail Polish
           price: 20
-          description: 
+          description: Take your polish up a notch! Do a nail design with our creative nail technicians!
         - name: Nail Trimming / File
           price: 30
-          description: 
+          description: Form and shape it just like how you want it to!
         - name: Cuticle Cleaning
           price: 50
-          description: 
+          description: A healthy nails also requires a healthy and clean Cuticles!
         - name: Striplac
           price: 100
-          description: 
+          description: The world’s first nail polish that lasts much longer than standard polish, doesn’t chip and doesn’t need any solvents or nail polish remover to remove it.
     - subcategory: Nail Extensions
       items:
         - name: Nail Extension
           price: 30+
-          description: 
+          description: Intensify your claws with our Master Nail Technicians!
         - name: Nail Repair
           price: 25+
-          description: 
+          description: For any remedy regarding your nails.
         - name: 3D Design
           price: 600+
-          description: 
+          description: A 3D nail art is a very popular and fabulous look for your nails.
         - name: Extension Removal
           price: 100
-          description: 
-        - name: French Extension Long
+          description: Let the professionals do it for you
+        - name: French Extension
           price: 500
-          description: 
-        - name: French Extension Short
-          price: 450
-          description: 
+          description: Get fabulous looking nails with French manicure gel nail extensions!
         - name: Natural Overlay Set Long
           price: 400+
           description: 
         - name: Natural Overlay Set Short
           price: 350+
-          description: 
+          description: A quick way to attain luxurious nails!
         - name: Refill Deep
           price: 350
           description: 
@@ -51,7 +48,7 @@
           description: 
         - name: Refill Normal
           price: 220
-          description: 
+          description: Refresh your nails - get them to look good as new!
         - name: Refill with Design
           price: 300+
           description: 
@@ -63,21 +60,21 @@
           description:
         - name: Stone
           price: 20
-          description: 
+          description: A must nail accessory! This will add volume and a statement for your nails.
     - subcategory: Hands
       items:
         - name: Manicure
           price: 60
-          description: 
+          description: A classic and essential manicure for all expressive ladies!
         - name: French
           price: 80
           description: 
         - name: French Polish
           price: 20
-          description: 
+          description: If you want to gain that classic, elegant look of a french manicure
         - name: Lac
           price: 160
-          description: 
+          description: If you want a chip free Nail Polish that instantly dries, is durable and strengthens the natural nails, then alessandro International's LAC SENSATION is for you
         - name: Lac Polish
           price: 100
           description: 
@@ -95,7 +92,7 @@
           description: 
         - name: Alessandro Spa Manicure
           price: 230
-          description: 
+          description: NAIL SPA is a unique nail care system that can be adapted to the individual needs of different nail types. For hands & feet.
         - name: Manicure Paraffin
           price: 150
           description: 
@@ -104,12 +101,12 @@
           description: 
         - name: Thermasoft Paraffin Hands
           price: 110
-          description: 
+          description: THERMASOFT is a purely natural, self-heating hand and foot mask, of which both relaxes and regenerates with a pleasant heat. The active ingredients penetrate deeply into the skin and unfold intense therapeutic effects there. For Hands & Feet
     - subcategory: Feet
       items:
         - name: Pedicure
           price: 110
-          description: 
+          description: A classic and essential manicure for all expressive ladies!
         - name: Pedicure French
           price: 120
           description: 
@@ -130,14 +127,14 @@
           description: 
         - name: Feet Scraping
           price: 50
-          description: 
+          description: For a baby soft feet that you've ever feel.
 - categoryname: Hair
   subcategories:
     - subcategory: General
       items:
         - name: Hair Cut + Blowdry
           price: 200
-          description: 
+          description: Look your best for spontaneous meetings, a girl’s night out or dinner with family and friends. The Enigma Beauty Salon and Spa will refresh your style in just the right amount of time to make you look amazing.
         - name: Blowdry
           price: 80 - 150
           description: 
@@ -153,6 +150,8 @@
         - name: Kids Cut
           price: 100
           description: 
+        - name: Hair Extensions
+          description: Look like a star with secret celebrity styles! Hair extensions! Extensions have become a fashion accessory available for all women, and are capable of adding fullness, length and color, all within a matter of hours. The finishing touches will leave you looking fantastic!
         - name: Belli Capelli Keratin / pc
           price: 25
           description: 
@@ -164,6 +163,8 @@
           description: 
     - subcategory: Hair Coloring
       items:
+        - name: Hair Coloring
+          description: Transform your look dramatically with dimensional color, or create a subtle change that will leave your hair with exceptional shine, extraordinary hold and an unbelievable vision of color perfection.
         - name: Barex Coloring
           price: 300
           description: 
@@ -175,27 +176,27 @@
           description: 
         - name: Hair Tonning
           price: 150
-          description: 
+          description: Color your hair just like how you want it to! Hair toning neutralize brassy (yellow or yellow/orange) pigments.
         - name: Highlights
           price: 350+
-          description: 
+          description: Add pizzazz! And sparkle! To your hair with highlights. Which ever you decide, we can customize your highlight to brighten up your base color, or add lowlights to give your hair depth.
         - name: Bleaching
           price: 350
-          description: 
+          description: Want to look like you were born with it! Let our color specialists design the perfect tone of warm or cool shades for that incredibly natural look.
         - name: Root Coloring
           price: 250
-          description: 
+          description: There is no reason to hide your hair when it starts to show its roots! Get a root coloring treatment.
         - name: Root Highlights
           price: 150
-          description: 
+          description: Frame your face with partial highlights and/or lowlights. Either application can completely change the profile of any existing style with an impressionable impact as a finishing result.
         - name: Hair Color Removal
           price: 350+
-          description: 
+          description: For a color change. Back to black or whatever your hair color is
     - subcategory: Hair Styling & Treatment
       items:
         - name: Hairstyle
           price: 200
-          description: 
+          description: In keeping with the latest styles, trends, Looks and fashion, our stylists customize each look to create a perfect haircut just for you.
         - name: Bridal Hairstyle
           price: 1000
           description: 
@@ -213,7 +214,7 @@
           description: 
         - name: Hair Mask
           price: 100
-          description: 
+          description: Experience the ultimate beauty of healthy hair! Enigma signature hair mask formulas are a wide range of professional products; Barex Italian (our own brands) especially designed for superior care of any type of hair condition. Our professionally trained stylist will choose the right treatment for the best results that can be seen and felt before you even leave the salon chair.
         - name: Hot Iron Curl
           price: 200
           description: 

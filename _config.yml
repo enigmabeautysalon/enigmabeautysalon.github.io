@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 
   It also has services on hair such as cutting, styling and coloring, a Makeup Section and Spa Services that offer ultra-chic, ultra-comfortable treatment rooms with the finest spa linens and equipment. The Spa offers massages in a variety of styles – traditional Swedish Massage, Deep Tissue work, Hot Stone Massage, Reflexology, Thai etc.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://enigmaladiessalon.com" # the base hostname & protocol for your site
 permalink: /blog/:title
 twitter_username: enigmabeautyss
 facebook: "https://www.facebook.com/enigmabeautysalonandspa/"
@@ -23,3 +23,7 @@ googleplus: "https://plus.google.com/+Enigmaladiessalon"
 
 # Build settings
 markdown: kramdown
+collections:
+  services:
+    output: true
+    permalink: /services/:path/

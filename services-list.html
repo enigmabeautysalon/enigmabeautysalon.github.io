@@ -1,0 +1,60 @@
+---
+layout: default
+title: Services
+---
+
+<div class="services_splash_section parallax-container">
+	<div class="parallax" style="background: url('img/compressed/newsletter.jpg') center center / cover no-repeat;"></div>
+	<div class="container">
+		<h1 class="styled">Services</h1>
+	</div>
+</div>
+
+<div class="services_service_section">
+
+	<div class="container row">
+		
+		{% for category in site.data.services %}
+		
+		<!-- Set width of each category -->
+		{% assign width = '' %}
+		{% if category.categoryname == 'Hair' or category.categoryname == 'Nails' %}
+			{% assign width = "col-xs-12" %}
+			{% assign width_2 = 'col-xs-12 col-sm-4 col-md-3' %}
+		{% else %}
+			{% assign width = "col-xs-12 col-sm-4" %}
+			{% assign width_2 = 'col-xs-12' %}
+		{% endif %}
+
+		<section class="row padding-40 {{ width }}" id="{{ category.categoryname }}">
+
+			<h3 class="styled col-xs-12">
+				{{ category.categoryname }}
+			</h3>
+			
+			<!-- List subcategories -->
+
+			{% for subcategories in category.subcategories %}
+				<ul class="services_service_section_list {{ width_2 }}">
+						{% if subcategories.subcategory %}
+						<h5>
+							{{ subcategories.subcategory }}
+						</h5>
+						{% endif %}
+
+						{% for serviceItem in subcategories.items %}
+							<li>
+								{{ serviceItem.name }}
+								<!--  <span>{{ serviceItem.price }}</span> -->
+							</li>
+						{% endfor %}
+				</ul>
+			{% endfor %}
+
+			<!-- End subcategories listing -->
+
+		</section> <!-- end service_category -->
+		{% endfor %} <!-- end of category query -->
+	</div>
+	
+</div>
