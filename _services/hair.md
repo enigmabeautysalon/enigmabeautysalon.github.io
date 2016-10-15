@@ -13,12 +13,15 @@ gallery:
  - image: img/services/hair/4.jpg
  - image: img/services/hair/5.jpg
  - image: img/services/hair/6.jpg
+<<<<<<< HEAD
  - image: img/services/hair/7.jpg
  - image: img/services/hair/8.jpg
  - image: img/services/hair/9.jpg
  - image: img/services/hair/10.jpg
  - image: img/services/hair/11.jpg
  - image: img/services/hair/12.jpg
+=======
+>>>>>>> cc8dedceacb3f504120419ac320e032bdb52c035
 ---
 
 <div class="container">

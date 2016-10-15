@@ -9,6 +9,7 @@ img: img/services/nails/1.jpg
 gallery:
  - image: img/services/nails/1.jpg
  - image: img/services/nails/2.jpg
+<<<<<<< HEAD
  - image: img/services/nails/3.jpg
  - image: img/services/nails/4.jpg
  - image: img/services/nails/5.jpg
@@ -19,6 +20,9 @@ gallery:
  - image: img/services/nails/10.jpg
  - image: img/services/nails/11.jpg
  - image: img/services/nails/12.jpg
+=======
+ - image: img/services/nails/6.jpg
+>>>>>>> cc8dedceacb3f504120419ac320e032bdb52c035
 ---
 
 <div class="container">
