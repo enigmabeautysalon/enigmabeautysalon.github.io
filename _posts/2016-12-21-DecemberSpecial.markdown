@@ -9,4 +9,4 @@ A season of Great Joy and Love! Let us show and share our love, cherish peace an
 
 Here, we arranged several packages that focuses on your health and well-being.
 
-### Book NOW until December 30, 2016 to get a special discounts: 043280033 
+### Hurry UP! Promo runs until December 30, 2016 only!Book NOW to get a special discounts: 043280033 
