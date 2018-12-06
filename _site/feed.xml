@@ -5,11 +5,45 @@
     <description>An upscale destination in Dubai, UAE offering a complete range of services for the purpose of improving health, beauty and relaxation through personal care treatments. From Manicure &amp; Pedicure stations to a full-fledged Nailbar.
 It also has services on hair such as cutting, styling and coloring, a Makeup Section and Spa Services that offer ultra-chic, ultra-comfortable treatment rooms with the finest spa linens and equipment. The Spa offers massages in a variety of styles – traditional Swedish Massage, Deep Tissue work, Hot Stone Massage, Reflexology, Thai etc.
 </description>
-    <link>https://enigmaladiessalon.com/</link>
-    <atom:link href="https://enigmaladiessalon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Oct 2016 15:32:09 +0400</pubDate>
-    <lastBuildDate>Sat, 15 Oct 2016 15:32:09 +0400</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 07 Dec 2018 03:58:58 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Dec 2018 03:58:58 +0800</lastBuildDate>
+    <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>A Festive Offers for December!</title>
+        <description>&lt;p&gt;A season of Great Joy and Love! Let us show and share our love, cherish peace and goodwill.&lt;/p&gt;
+
+&lt;p&gt;Here, we arranged several packages that focuses on your health and well-being.&lt;/p&gt;
+
+&lt;h3 id=&quot;hurry-up-promo-runs-until-december-30-2016-only-book-now-to-get-special-discounts-043280033&quot;&gt;Hurry UP! Promo runs until December 30, 2016 only! Book NOW to get special discounts: 043280033&lt;/h3&gt;
+</description>
+        <pubDate>Wed, 21 Dec 2016 20:53:06 +0800</pubDate>
+        <link>http://localhost:4000/blog/DecemberSpecial</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/DecemberSpecial</guid>
+        
+        
+        <category>promo</category>
+        
+      </item>
+    
+      <item>
+        <title>November Special Treatment Package</title>
+        <description>&lt;p&gt;First of the many that’s coming soon - The November Treatment Package&lt;/p&gt;
+
+&lt;p&gt;For half the price (50% OFF), take pleasure in a sensational 1 hour Thai Massage, followed by a pampering Steam Hair Treatment and Blowdry!&lt;/p&gt;
+
+&lt;h3 id=&quot;book-now--043280033&quot;&gt;Book Now : 043280033&lt;/h3&gt;
+</description>
+        <pubDate>Sun, 06 Nov 2016 18:00:06 +0800</pubDate>
+        <link>http://localhost:4000/blog/november-package-treatment</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/november-package-treatment</guid>
+        
+        
+        <category>promo</category>
+        
+      </item>
     
       <item>
         <title>Pinktober Specials / Promotions This October</title>
@@ -19,9 +53,9 @@ It also has services on hair such as cutting, styling and coloring, a Makeup Sec
 
 &lt;h3 id=&quot;book-now--043280033&quot;&gt;Book Now : 043280033&lt;/h3&gt;
 </description>
-        <pubDate>Tue, 11 Oct 2016 14:00:06 +0400</pubDate>
-        <link>https://enigmaladiessalon.com/blog/pinktober-promotions-for-october</link>
-        <guid isPermaLink="true">https://enigmaladiessalon.com/blog/pinktober-promotions-for-october</guid>
+        <pubDate>Tue, 11 Oct 2016 18:00:06 +0800</pubDate>
+        <link>http://localhost:4000/blog/pinktober-promotions-for-october</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/pinktober-promotions-for-october</guid>
         
         
         <category>promo</category>
@@ -34,9 +68,9 @@ It also has services on hair such as cutting, styling and coloring, a Makeup Sec
 
 &lt;p&gt;Now, it’s easy to get updated&lt;/p&gt;
 </description>
-        <pubDate>Wed, 14 Sep 2016 14:00:06 +0400</pubDate>
-        <link>https://enigmaladiessalon.com/blog/new-platform</link>
-        <guid isPermaLink="true">https://enigmaladiessalon.com/blog/new-platform</guid>
+        <pubDate>Wed, 14 Sep 2016 18:00:06 +0800</pubDate>
+        <link>http://localhost:4000/blog/new-platform</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/new-platform</guid>
         
         
         <category>nails</category>
@@ -71,9 +105,9 @@ It also has services on hair such as cutting, styling and coloring, a Makeup Sec
 &lt;p&gt;As a leading system provider, alessandro International offers a complete range of products for the care and appearance of hands, nails and feet. In addition to leading the way in terms of quality and innovation, alessandro International also stands out for the numerous awards it has received and its global distribution network. At the same time, the company and its team of prestigious nail artists have earned the attention of beauty lovers and VIPs worldwide through creative and trend-setting designs and nail looks.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 04 Sep 2016 14:00:06 +0400</pubDate>
-        <link>https://enigmaladiessalon.com/blog/the-sweet-colors-of-candy</link>
-        <guid isPermaLink="true">https://enigmaladiessalon.com/blog/the-sweet-colors-of-candy</guid>
+        <pubDate>Sun, 04 Sep 2016 18:00:06 +0800</pubDate>
+        <link>http://localhost:4000/blog/the-sweet-colors-of-candy</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/the-sweet-colors-of-candy</guid>
         
         
         <category>nails</category>
