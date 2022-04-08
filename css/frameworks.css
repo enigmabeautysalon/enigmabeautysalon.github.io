@@ -197,3 +197,33 @@ table {
 	min-height: 150px;
 	background: url(AjaxLoader.gif) no-repeat center center
 }
+
+/*Mobile Updates*/
+.bookme {
+    border: 1px solid;
+    width: 95%;
+    font-size: .5em;
+    margin: 0 auto;
+    color: white !important;
+    text-align: center;
+    white-space: nowrap;
+    background: #4b007d;
+    border-radius: 5px;
+    margin-top: 20px;}
+
+
+@media screen and (min-width:768px)
+{
+.bookme {
+   display: none !important;}
+}
+
+@media screen and (max-width:768px)
+{
+.bookmeMargintop {
+    margin-top: 40% !important;
+}
+
+.bookmeMarginbutton {
+    margin-bottom: 20% !important;}
+}
